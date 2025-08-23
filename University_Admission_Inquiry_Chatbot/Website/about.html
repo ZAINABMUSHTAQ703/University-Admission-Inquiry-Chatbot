@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | University of Sargodha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-logo {
+                height: 30px;
+            }
+        }
+
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        /* Color Variables - Sargodha University Colors */
+        :root {
+            --primary-blue: #003366;
+            --dark-blue: #001a33;
+            --light-blue: #0066cc;
+            --black: #121212;
+            --dark-gray: #333333;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --orange: #ff6600;
+            --light-orange: #ff9933;
+        }
+
+
+        /* Global Styles */
+        body {
+            color: var(--black);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--light-blue);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--orange);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--orange);
+            color: var(--white);
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background-color: var(--light-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            position: relative;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-blue);
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--orange);
+            border-radius: 2px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .logo span {
+            color: var(--orange);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-gray);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--orange);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 120px 0 40px;
+            background-color: var(--light-gray);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .breadcrumb-item {
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            content: '/';
+            margin-left: 10px;
+            color: var(--dark-gray);
+        }
+
+        /* About Hero */
+        .about-hero {
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), 
+                        url("https://www.su.edu.pk/upload/news/Pic%20(2)_1688416513.JPG") no-repeat center center/cover;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        /* History & Mission */
+        .history-mission {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .history-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .history-img {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+        }
+
+        .history-img:hover {
+            transform: scale(1.02);
+        }
+
+        .history-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .mission-list {
+            margin-top: 30px;
+        }
+
+        .mission-item {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mission-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-icon {
+            font-size: 1.5rem;
+            color: var(--orange);
+            margin-right: 20px;
+        }
+
+        /* Leadership */
+        .leadership {
+            background-color: var(--light-gray);
+            padding: 80px 0;
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .leader-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .leader-img {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .leader-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .leader-card:hover .leader-img img {
+            transform: scale(1.1);
+        }
+
+        .leader-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .leader-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+
+        .leader-info p {
+            color: var(--orange);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .leader-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .leader-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: var(--light-gray);
+            border-radius: 50%;
+            color: var(--dark-gray);
+            transition: all 0.3s ease;
+        }
+
+        .leader-social a:hover {
+            background-color: var(--orange);
+            color: var(--white);
+        }
+
+        /* Accreditations */
+        .accreditations {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .accreditations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            align-items: center;
+        }
+
+        .accreditation-item {
+            background-color: var(--light-gray);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .accreditation-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .accreditation-img {
+            height: 100px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .accreditation-img img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        /* Virtual Tour */
+        .virtual-tour {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .tour-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .tour-content {
+            position: relative;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .tour-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tour-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 86, 179, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .tour-content:hover .tour-overlay {
+            opacity: 1;
+        }
+
+        .tour-overlay i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--orange);
+        }
+
+        /* Facts Section */
+        .facts {
+            padding: 80px 0;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            position: relative;
+        }
+
+        .facts::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .facts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .fact-card {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .fact-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .fact-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--orange);
+        }
+
+        .fact-title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--orange);
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--orange);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--orange);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* Typewriter Effect */
+        .typewriter {
+            display: inline-block;
+            position: relative;
+        }
+
+        .typewriter::after {
+            content: '|';
+            position: absolute;
+            right: -10px;
+            animation: blink 0.7s infinite;
+            color: var(--orange);
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Chatbot Button */
+        .chatbot-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--orange);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-btn:hover {
+            background-color: var(--light-orange);
+            transform: scale(1.1);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .history-content,
+            .tour-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .tour-content {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 40px;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .about-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .fact-number {
+                font-size: 2.5rem;
+            }
+        }
+
+                /* Project Owners Section */
+                .project-owners {
+            background-color: var(--white);
+        }
+        
+        .owners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .owner-card {
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .owner-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .owner-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .owner-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .owner-card:hover .owner-img img {
+            transform: scale(1.1);
+        }
+        
+        .owner-info {
+            padding: 25px;
+        }
+        
+        .owner-info h3 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+        
+        .role {
+            color: var(--orange);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .owner-details {
+            margin-bottom: 20px;
+        }
+        
+        .owner-details ul {
+            list-style-position: inside;
+            margin-top: 10px;
+        }
+        
+        .owner-details li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .owner-contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .owner-social {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .owner-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: var(--white);
+            border-radius: 50%;
+            color: var(--dark-gray);
+            transition: all 0.3s ease;
+        }
+        
+        .owner-social a:hover {
+            background-color: var(--orange);
+            color: var(--white);
+        }
+        
+        @media (max-width: 768px) {
+            .owners-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_grGHJL36GZKtCxqf2r2Nc2MQ05EkuRC-ir55jwuTmavUMnt2SCfnSmXdc9HDr6lRkoM&usqp=CAU" alt="University of Sargodha Logo" class="nav-logo" style="height: 70px; width: 70px;">
+                    <a href="#" class="logo">Sargodha<span>University</span></a>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html">Programs</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="chatbot.html">Chatbot</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb 
+    <section class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">About Us</li>
+            </ul>
+        </div>
+    </section>-->
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>
+                <span class="typewriter" id="typewriter"></span>
+            </h1>
+            <p>Discover the legacy, leadership, and excellence that define the University of Sargodha</p>
+        </div>
+    </section>
+
+    <!-- History & Mission -->
+    <section class="history-mission section-padding">
+        <div class="container">
+            <h2 class="section-title">Our History & Mission</h2>
+            <div class="history-content">
+                <div class="history-img floating">
+                    <img src="d:\Chatbot Documentation official\images\WhatsApp Image 2024-07-30 at 16.36.06 (1)_1722339949.jpeg" alt="University of Sargodha History">
+                </div>
+                <div>
+                    <p>The University of Sargodha was established in 2002, building upon the legacy of the Government College Sargodha which was founded in 1929. Over the years, the university has grown to become one of Pakistan's premier institutions of higher education.</p>
+                    <p>Our journey has been marked by academic excellence, research innovation, and a commitment to serving the community. From humble beginnings, we've expanded to offer a wide range of undergraduate, graduate, and doctoral programs across multiple disciplines.</p>
+                    
+                    <div class="mission-list">
+                        <div class="mission-item">
+                            <div class="mission-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div>
+                                <h3>Our Vision</h3>
+                                <p>To be a leading institution of higher education recognized for academic excellence, research innovation, and societal impact.</p>
+                            </div>
+                        </div>
+                        <div class="mission-item">
+                            <div class="mission-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div>
+                                <h3>Our Mission</h3>
+                                <p>To provide quality education, foster research, and develop skilled professionals who contribute to national development.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership -->
+    <section class="leadership section-padding">
+        <div class="container">
+            <h2 class="section-title">University Leadership</h2>
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="leader-img">
+                        <img src="https://su.edu.pk/images/vc-syndicate/dr-qaisar.png" alt="Vice Chancellor">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Prof. Dr. Qaisar Abbas</h3>
+                        <p>Vice Chancellor</p>
+                        <div class="leader-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-img">
+                        <img src="https://www.su.edu.pk/upload/teacher/hikmat_1694021389.jpg" alt="Dean of IT">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Prof. Dr. Hikmmat Ullah Khan</h3>
+                        <p>Chairman, Faculty of IT</p>
+                        <div class="leader-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-img">
+                        <img src="https://www.su.edu.pk/upload/department/faculty/profiles/19.jpg" alt="Dean of CS">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Prof. Dr. Muhammad Ilyas</h3>
+                        <p>Chairman, Faculty of CS</p>
+                        <div class="leader-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accreditations -->
+    <section class="accreditations section-padding">
+        <div class="container">
+            <h2 class="section-title">Accreditations & Rankings</h2>
+            <div class="accreditations-grid">
+                <div class="accreditation-item floating">
+                    <div class="accreditation-img">
+                        <img src="https://www.hec.gov.pk/english/PublishingImages/ThematicImages/HEC%20Logo1.jpg" alt="HEC">
+                    </div>
+                    <h3>HEC Recognized</h3>
+                    <p>Recognized by the Higher Education Commission of Pakistan</p>
+                </div>
+                <div class="accreditation-item floating delay-1">
+                    <div class="accreditation-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ29JTMbIuwKDhGJ6TQOZ9ZfIEq7x_gAXuLmQ&s" alt="PCST">
+                    </div>
+                    <h3>PCST Member</h3>
+                    <p>Member of Pakistan Council for Science and Technology</p>
+                </div>
+                <div class="accreditation-item floating delay-2">
+                    <div class="accreditation-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLIm8xCD5qwA6HwpcRWPxXVvbHx3gvgZBPbA&s" alt="IAU">
+                    </div>
+                    <h3>IAU Member</h3>
+                    <p>Member of International Association of Universities</p>
+                </div>
+                <div class="accreditation-item floating delay-3">
+                    <div class="accreditation-img">
+                        <img src="https://www.yokak.gov.tr/wp-content/uploads/2024/07/apqn_logo.webp" alt="APQN">
+                    </div>
+                    <h3>APQN Member</h3>
+                    <p>Member of Asia-Pacific Quality Network</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour -->
+    <section class="virtual-tour section-padding">
+        <div class="container">
+            <h2 class="section-title">Campus Virtual Tour</h2>
+            <div class="tour-container">
+                <div class="tour-content">
+                    <iframe 
+                        width="100%" 
+                        height="400" 
+                        src="https://www.youtube.com/embed/-MNRPll4nVE?si=KbqUNRcyZvPq8XEj" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>                <div>
+                    <h3>Discover Our Beautiful Campus</h3>
+                    <p>Take a virtual tour of our state-of-the-art facilities, lush green spaces, and modern infrastructure that make the University of Sargodha an ideal place for learning and growth.</p>
+                    <p>Our campus spans over 500 acres with:</p>
+                    <ul style="margin: 20px 0; padding-left: 20px;">
+                        <li>Modern lecture halls and laboratories</li>
+                        <li>Extensive library resources</li>
+                        <li>Sports and recreational facilities</li>
+                        <li>Student hostels and residential areas</li>
+                        <li>Beautiful botanical gardens</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facts Section -->
+    <section class="facts section-padding">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--white);">University at a Glance</h2>
+            <div class="facts-container">
+                <div class="fact-card">
+                    <div class="fact-number" id="students-count">0</div>
+                    <div class="fact-title">Students</div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number" id="faculty-count">0</div>
+                    <div class="fact-title">Faculty Members</div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number" id="programs-count">0</div>
+                    <div class="fact-title">Academic Programs</div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number" id="departments-count">0</div>
+                    <div class="fact-title">Departments</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Project Owners -->
+    <section class="project-owners section-padding">
+        <div class="container">
+            <h2 class="section-title">Project Owners</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 40px; font-size: 1.2rem;">
+                Meet the team behind the Admission Inquiry Chatbot and University Website
+            </p>
+            
+            <div class="owners-grid">
+                <!-- Team Member 1 -->
+                <div class="owner-card">
+                    <div class="owner-img">
+                        <img src="zainab.jpg" alt="Team Member 1">
+                    </div>
+                    <div class="owner-info">
+                        <h3>Zainab Mushtaq</h3>
+                        <p class="role">Rasa Chatbot Developer</p>
+                        <div class="owner-details">
+                            <p><strong>Responsibilities:</strong></p>
+                            <ul>
+                                <li>Designed and implemented Rasa chatbot architecture</li>
+                                <li>Developed NLP models for admission inquiries</li>
+                            </ul>
+                        </div>
+                        <div class="owner-contact">
+                            <p><i class="fas fa-envelope"></i> zainabzaini087@gmail.com</p>
+                            <div class="owner-social">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="owner-card">
+                    <div class="owner-img">
+                        <img src="khushi.jpg" alt="Team Member 2">
+                    </div>
+                    <div class="owner-info">
+                        <h3>Khushbakhat Saeed</h3>
+                        <p class="role">Frontend Developer</p>
+                        <div class="owner-details">
+                            <p><strong>Responsibilities:</strong></p>
+                            <ul>
+                                <li>Designed and developed university website UI</li>
+                                <li>Implemented chatbot interface integration</li>
+                            </ul>
+                        </div>
+                        <div class="owner-contact">
+                            <p><i class="fas fa-envelope"></i> Khushbakhat311@gmail.com</p>
+                            <div class="owner-social">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="owner-card">
+                    <div class="owner-img">
+                        <img src="aneesa.jpg" alt="Team Member 3">
+                    </div>
+                    <div class="owner-info">
+                        <h3>Aneesa Ibrar</h3>
+                        <p class="role">Backend Developer</p>
+                        <div class="owner-details">
+                            <p><strong>Responsibilities:</strong></p>
+                            <ul>
+                                <li>Developed API endpoints for chatbot communication</li>
+                            </ul>
+                        </div>
+                        <div class="owner-contact">
+                            <p><i class="fas fa-envelope"></i> aneesa123@gmail.com</p>
+                            <div class="owner-social">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-details" style="margin-top: 50px; background-color: var(--light-gray); padding: 30px; border-radius: 8px;">
+                <h3 style="text-align: center; margin-bottom: 20px; color: var(--primary-blue);">About the Project</h3>
+                <p>The Admission Inquiry Chatbot is an AI-powered virtual assistant developed using Rasa framework to handle student inquiries about admissions, programs, and university services. The chatbot is integrated with this responsive university website to provide seamless support to prospective students.</p>
+                <p style="margin-top: 15px;"><strong>Technologies Used:</strong> Rasa, Python, HTML5, CSS3, JavaScript</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>The University of Sargodha is committed to academic excellence, research innovation, and community engagement in Pakistan's higher education landscape.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Academic Calendar</a></li>
+                        <li><a href="#">University Library</a></li>
+                        <li><a href="#">Campus Map</a></li>
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Faculty Directory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> University Road, Sargodha, Punjab, Pakistan</p>
+                    <p><i class="fas fa-phone"></i> +92 48 9230811-15</p>
+                    <p><i class="fas fa-envelope"></i> info@uos.edu.pk</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 University of Sargodha. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Chatbot Button -->
+    <div class="chatbot-btn" onclick="toggleChatbot()"><i class="fas fa-robot"></i></div>
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <h3>Admission Assistant</h3>
+            <button class="chatbot-close" onclick="closeChatbot()">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <div class="typing-indicator" id="typing-indicator">
+            <span class="typing-dots"></span>
+            <span class="typing-dots"></span>
+            <span class="typing-dots"></span>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input-field" placeholder="Ask about admissions...">
+            <button id="chatbot-send-btn" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Typewriter Effect
+        const typewriterElement = document.getElementById('typewriter');
+        const phrases = [
+            "University of Sargodha",
+            "Excellence in Education",
+            "Since 2002",
+            "Leading with Innovation"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isEnd = false;
+
+        function typeWriter() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isEnd = true;
+                isDeleting = true;
+                setTimeout(typeWriter, 1500);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeWriter, 500);
+            } else {
+                const speed = isDeleting ? 100 : 150;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        // Start the typewriter effect
+        setTimeout(typeWriter, 1000);
+
+        // Counter Animation for Facts
+        function animateCounters() {
+            const studentsCount = document.getElementById('students-count');
+            const facultyCount = document.getElementById('faculty-count');
+            const programsCount = document.getElementById('programs-count');
+            const departmentsCount = document.getElementById('departments-count');
+
+            const targetStudents = 25000;
+            const targetFaculty = 800;
+            const targetPrograms = 120;
+            const targetDepartments = 35;
+
+            const duration = 2000; // Animation duration in ms
+            const interval = 20; // Update interval in ms
+            const steps = duration / interval;
+
+            let currentStudents = 0;
+            let currentFaculty = 0;
+            let currentPrograms = 0;
+            let currentDepartments = 0;
+
+            const studentsStep = targetStudents / steps;
+            const facultyStep = targetFaculty / steps;
+            const programsStep = targetPrograms / steps;
+            const departmentsStep = targetDepartments / steps;
+
+            const counterInterval = setInterval(() => {
+                currentStudents += studentsStep;
+                currentFaculty += facultyStep;
+                currentPrograms += programsStep;
+                currentDepartments += departmentsStep;
+
+                studentsCount.textContent = Math.floor(currentStudents).toLocaleString();
+                facultyCount.textContent = Math.floor(currentFaculty);
+                programsCount.textContent = Math.floor(currentPrograms);
+                departmentsCount.textContent = Math.floor(currentDepartments);
+
+                if (currentStudents >= targetStudents && 
+                    currentFaculty >= targetFaculty && 
+                    currentPrograms >= targetPrograms && 
+                    currentDepartments >= targetDepartments) {
+                    clearInterval(counterInterval);
+                    studentsCount.textContent = targetStudents.toLocaleString();
+                    facultyCount.textContent = targetFaculty;
+                    programsCount.textContent = targetPrograms;
+                    departmentsCount.textContent = targetDepartments;
+                }
+            }, interval);
+        }
+
+        // Start counter animation when facts section is in view
+        const factsSection = document.querySelector('.facts');
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateCounters();
+                observer.unobserve(factsSection);
+            }
+        }, { threshold: 0.5 });
+
+        observer.observe(factsSection);
+
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Floating animation for elements
+        const floatingElements = document.querySelectorAll('.floating');
+        floatingElements.forEach(el => {
+            el.style.animationDelay = el.classList.contains('delay-1') ? '0.2s' :
+                                      el.classList.contains('delay-2') ? '0.4s' :
+                                      el.classList.contains('delay-3') ? '0.6s' : '0s';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

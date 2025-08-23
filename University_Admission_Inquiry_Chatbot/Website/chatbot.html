@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions | University of Sargodha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-logo {
+                height: 30px;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary-blue: #003366;
+            --dark-blue: #001a33;
+            --light-blue: #0066cc;
+            --black: #121212;
+            --dark-gray: #333333;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --orange: #ff6600;
+            --light-orange: #ff9933;
+        }
+
+
+        body {
+            color: var(--black);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--orange);
+            color: var(--white);
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background-color: var(--light-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            position: relative;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-blue);
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--orange);
+            border-radius: 2px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .logo span {
+            color: var(--orange);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-gray);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--orange);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: var(--orange);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card:hover::before {
+            height: 10px;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--orange);
+            margin-bottom: 20px;
+        }
+        /* New Chatbot Features Section */
+        .chatbot-features {
+            background-color: var(--light-gray);
+            padding: 80px 0;
+        }
+        
+        .tech-stack {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(0,86,179,0.05);
+            border-radius: 8px;
+        }
+
+        .tech-icon {
+            margin-right: 20px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-icon {
+            color: var(--orange);
+            font-size: 1.2rem;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .feature-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .comparison-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--orange);
+        }
+        
+        .comparison-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .process-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 0 15px;
+            min-width: 150px;
+        }
+        
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--orange);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-size: 1.2rem;
+        }
+        
+        .process-arrow {
+            color: var(--primary-blue);
+            padding: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .process-flow {
+                flex-direction: column;
+            }
+            .process-arrow {
+                transform: rotate(90deg);
+                padding: 10px 0;
+            }
+        }
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 40px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-card {
+            min-width: 100%;
+            padding: 30px;
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 3px solid var(--orange);
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-dot.active {
+            background-color: var(--orange);
+            transform: scale(1.2);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 86, 179, 0.9)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--orange);
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--orange);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--orange);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes typingAnimation {
+            0%, 100% {
+                opacity: 0.4;
+                transform: translateY(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-3px);
+            }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* Typewriter Effect */
+        .typewriter {
+            display: inline-block;
+            position: relative;
+        }
+
+        .typewriter::after {
+            content: '|';
+            position: absolute;
+            right: -10px;
+            animation: blink 0.7s infinite;
+            color: var(--orange);
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 40px;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero {
+                height: auto;
+                padding: 150px 0 100px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .feature-card {
+                padding: 30px 20px;
+            }
+        }
+            /* Chatbot Button */
+            .chatbot-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--orange);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-btn:hover {
+            background-color: var(--light-orange);
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_grGHJL36GZKtCxqf2r2Nc2MQ05EkuRC-ir55jwuTmavUMnt2SCfnSmXdc9HDr6lRkoM&usqp=CAU" alt="University of Sargodha Logo" class="nav-logo" style="height: 70px; width: 70px;">
+                    <a href="#" class="logo">Sargodha<span>University</span></a>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html">Programs</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="chatbot.html" class="active">Chatbot</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    <span class="typewriter" id="typewriter"></span>
+                </h1>
+                <p>Discover our innovative admission process and join our academic community</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features section-padding">
+        <div class="container">
+            <h2 class="section-title">Why Choose University of Sargodha</h2>
+            <div class="features-grid">
+                <div class="feature-card floating">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Academic Excellence</h3>
+                    <p>Ranked among the top universities in Pakistan with accredited programs and qualified faculty.</p>
+                </div>
+                <div class="feature-card floating delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Modern Facilities</h3>
+                    <p>State-of-the-art labs, libraries, and research centers to support your learning journey.</p>
+                </div>
+                <div class="feature-card floating delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Student Support</h3>
+                    <p>Comprehensive support services including counseling, career guidance, and financial aid.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section-padding">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are the admission requirements for undergraduate programs?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For undergraduate programs, you need a Higher Secondary School Certificate (HSSC) or equivalent with at least 45% marks. Additional requirements may vary by program.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>When is the application deadline for Fall 2023?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The application deadline for Fall 2023 is August 30, 2023. We recommend applying early to ensure all documents are processed on time.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How can I check my application status?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can check your application status through our online portal. You'll need your application reference number to access your status.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Does the university offer scholarships?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer various scholarships based on merit and financial need. Please visit our financial aid office for more information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section-padding">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-track" id="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student">
+                        </div>
+                        <p class="testimonial-text">"The admission process was very smooth and well-organized. The staff was extremely helpful throughout the entire process."</p>
+                        <p class="testimonial-author">- Ahmed Raza, BS Computer Science</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Student">
+                        </div>
+                        <p class="testimonial-text">"I was impressed by how quickly I got all the information I needed about program requirements. It made my decision to join UoS much easier."</p>
+                        <p class="testimonial-author">- Fatima Khan, MS Data Science</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Student">
+                        </div>
+                        <p class="testimonial-text">"As an international student, I had many questions. The admission office provided clear answers and guidance throughout the process."</p>
+                        <p class="testimonial-author">- John Smith, PhD Computer Science</p>
+                    </div>
+                </div>
+                <div class="testimonial-nav" id="testimonial-nav">
+                    <div class="testimonial-dot active"></div>
+                    <div class="testimonial-dot"></div>
+                    <div class="testimonial-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Chatbot Features Section -->
+    <section class="chatbot-features section-padding">
+        <div class="container">
+            <h2 class="section-title">Our AI Admission Assistant</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">
+                The University of Sargodha's chatbot provides 24/7 intelligent assistance for all admission-related queries, 
+                powered by cutting-edge natural language processing technology.
+            </p>
+            
+            <div class="tech-stack animate__animated animate__fadeIn">
+                <img src="data:image/jpeg;base64,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" alt="Rasa Logo">
+                <div class="tech-details">
+                    <h3>Powered by Rasa Open Source</h3>
+                    <p>Our chatbot is built on Rasa, the most advanced conversational AI framework that understands context, remembers conversations, and improves continuously.</p>
+                </div>
+            </div>
+            
+        <!-- Chatbot Features Section -->
+        <section class="chatbot-features section-padding">
+            <div class="container">
+                <h2 class="section-title">Our Admission Inquiry Chatbot</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">
+                    The University Admission Information Center (UAIC) provides instant automated responses to common admission queries.
+                </p>
+                
+                <div class="tech-stack animate__animated animate__fadeIn">
+                    <div class="tech-icon">
+                        <i class="fas fa-robot" style="font-size: 60px; color: var(--orange);"></i>
+                    </div>
+                    <div class="tech-details">
+                        <h3>Automated Query Resolution System</h3>
+                        <p>Our chatbot delivers standardized responses to frequently asked admission questions.</p>
+                    </div>
+                </div>
+                
+                <h3 class="text-center" style="margin: 50px 0 30px; color: var(--primary-blue);">Key Benefits</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item animate__animated animate__fadeInLeft">
+                        <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
+                        <div>
+                            <h4>Instant Responses</h4>
+                            <p>Provides immediate answers to common admission queries 24/7</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item animate__animated animate__fadeInLeft animate__delay-1s">
+                        <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>Reduced Response Time</h4>
+                            <p>Eliminates waiting periods for basic information requests</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item animate__animated animate__fadeInLeft animate__delay-2s">
+                        <div class="benefit-icon"><i class="fas fa-user-graduate"></i></div>
+                        <div>
+                            <h4>Standardized Information</h4>
+                            <p>Delivers consistent, accurate admission details to all students</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item animate__animated animate__fadeInRight">
+                        <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                        <div>
+                            <h4>Operational Efficiency</h4>
+                            <p>Reduces workload on admission staff for routine inquiries</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item animate__animated animate__fadeInRight animate__delay-1s">
+                        <div class="benefit-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div>
+                            <h4>Innovative Approach</h4>
+                            <p>Modernizes the admission information delivery system</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item animate__animated animate__fadeInRight animate__delay-2s">
+                        <div class="benefit-icon"><i class="fas fa-smile"></i></div>
+                        <div>
+                            <h4>Improved Accessibility</h4>
+                            <p>Makes admission information available anytime, anywhere</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="text-center" style="margin: 60px 0 30px; color: var(--primary-blue);">System Characteristics</h3>
+                <div class="feature-comparison">
+                    <div class="comparison-card animate__animated animate__fadeInUp">
+                        <h4><i class="fas fa-info-circle" style="color: var(--orange); margin-right: 10px;"></i> Focused Scope</h4>
+                        <p>Specialized exclusively for admission-related queries with predetermined responses</p>
+                    </div>
+                    <div class="comparison-card animate__animated animate__fadeInUp animate__delay-1s">
+                        <h4><i class="fas fa-database" style="color: var(--orange); margin-right: 10px;"></i> Static Knowledge</h4>
+                        <p>Provides consistent answers based on official admission policies without adaptation</p>
+                    </div>
+                    <div class="comparison-card animate__animated animate__fadeInUp animate__delay-2s">
+                        <h4><i class="fas fa-shield-alt" style="color: var(--orange); margin-right: 10px;"></i> Privacy-Conscious</h4>
+                        <p>Does not store conversation history or personal data</p>
+                    </div>
+                </div>
+                
+                <div class="process-flow" style="margin: 60px auto; max-width: 800px;">
+                    <div class="process-step animate__animated animate__fadeIn">
+                        <div class="step-icon"><i class="fas fa-question"></i></div>
+                        <p>Student Query</p>
+                    </div>
+                    <div class="process-arrow animate__animated animate__fadeIn animate__delay-1s">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="process-step animate__animated animate__fadeIn animate__delay-2s">
+                        <div class="step-icon"><i class="fas fa-server"></i></div>
+                        <p>Predefined Response</p>
+                    </div>
+                    <div class="process-arrow animate__animated animate__fadeIn animate__delay-3s">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="process-step animate__animated animate__fadeIn animate__delay-4s">
+                        <div class="step-icon"><i class="fas fa-comment-dots"></i></div>
+                        <p>Instant Answer</p>
+                    </div>
+                </div>
+            </div>
+    
+            
+            <h3 class="text-center" style="margin: 60px 0 30px; color: var(--primary-blue);">Why Rasa Powers Better Chatbots</h3>
+            <div class="feature-comparison">
+                <div class="comparison-card animate__animated animate__fadeInUp">
+                    <h4><i class="fas fa-cogs" style="color: var(--orange); margin-right: 10px;"></i> Open Architecture</h4>
+                    <p>Rasa's open-source framework allows complete customization to our specific admission workflows and knowledge base.</p>
+                </div>
+                <div class="comparison-card animate__animated animate__fadeInUp animate__delay-1s">
+                    <h4><i class="fas fa-project-diagram" style="color: var(--orange); margin-right: 10px;"></i> Contextual Dialogues</h4>
+                    <p>Maintains conversation context across multiple turns, unlike basic rule-based chatbots.</p>
+                </div>
+                <div class="comparison-card animate__animated animate__fadeInUp animate__delay-2s">
+                    <h4><i class="fas fa-robot" style="color: var(--orange); margin-right: 10px;"></i> Machine Learning</h4>
+                    <p>Uses NLP to understand intent from varied phrasings, improving with each interaction.</p>
+                </div>
+            </div>
+            
+            <h3 class="text-center" style="margin: 60px 0 30px; color: var(--primary-blue);">How We Differ From Others</h3>
+            <div class="feature-comparison">
+                <div class="comparison-card animate__animated animate__fadeInLeft">
+                    <h4><i class="fas fa-university" style="color: var(--orange); margin-right: 10px;"></i> Domain-Specialized</h4>
+                    <p>Trained specifically on UoS admission policies, not a generic solution.</p>
+                </div>
+                <div class="comparison-card animate__animated animate__fadeInUp">
+                    <h4><i class="fas fa-exchange-alt" style="color: var(--orange); margin-right: 10px;"></i> Multi-Channel</h4>
+                    <p>Available on website, WhatsApp, and Facebook Messenger for your convenience.</p>
+                </div>
+                <div class="comparison-card animate__animated animate__fadeInRight">
+                    <h4><i class="fas fa-file-alt" style="color: var(--orange); margin-right: 10px;"></i> Document Processing</h4>
+                    <p>Can analyze uploaded documents (transcripts, certificates) for eligibility checks.</p>
+                </div>
+            </div>
+            
+<!--            <h3 class="text-center" style="margin: 60px 0 30px; color: var(--primary-blue);">Chatbot in Action</h3>
+            <div class="screenshot-gallery">
+                <div class="screenshot-item animate__animated animate__zoomIn">
+                    <img src="https://rasa.com/assets/img/blog/how-rasa-works/rasa-stack.png" alt="Chatbot Architecture">
+                </div>
+                <div class="screenshot-item animate__animated animate__zoomIn animate__delay-1s">
+                    <img src="https://rasa.com/assets/img/illustrations/hero-illustration.svg" alt="Conversation Flow">
+                </div>
+                <div class="screenshot-item animate__animated animate__zoomIn animate__delay-2s">
+                    <img src="https://rasa.com/assets/img/illustrations/rasa-x-screenshot.png" alt="Training Interface">
+                </div>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta section-padding">
+        <div class="container">
+            <h2>Ready to Begin Your Journey at University of Sargodha?</h2>
+            <p>Start your application process today and join our academic community</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>The University of Sargodha is committed to academic excellence, research innovation, and community engagement in Pakistan's higher education landscape.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Admission Portal</a></li>
+                        <li><a href="#">Academic Programs</a></li>
+                        <li><a href="#">Fee Structure</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                        <li><a href="#">Campus Tour</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> University Road, Sargodha, Punjab, Pakistan</p>
+                    <p><i class="fas fa-phone"></i> +92 48 9230811-15</p>
+                    <p><i class="fas fa-envelope"></i> admissions@uos.edu.pk</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 University of Sargodha. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Chatbot Button -->
+    <div class="chatbot-btn" onclick="toggleChatbot()"><i class="fas fa-robot"></i></div>
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <h3>Admission Assistant</h3>
+            <button class="chatbot-close" onclick="closeChatbot()">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages" ></div>
+        <div class="typing-indicator" id="typing-indicator">
+            <span class="typing-dots"></span>
+            <span class="typing-dots"></span>
+            <span class="typing-dots"></span>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input-field" placeholder="Ask about admissions...">
+            <button id="chatbot-send-btn" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Typewriter Effect
+        const typewriterElement = document.getElementById('typewriter');
+        const phrases = [
+            "Welcome to UoS Admissions",
+            "Join Our Academic Community",
+            "University of Sargodha",
+            "Start Your Journey Today"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isEnd = false;
+
+        function typeWriter() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isEnd = true;
+                isDeleting = true;
+                setTimeout(typeWriter, 1500);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeWriter, 500);
+            } else {
+                const speed = isDeleting ? 100 : 150;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        // Start the typewriter effect
+        setTimeout(typeWriter, 1000);
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        // Testimonial Slider
+        const testimonialTrack = document.getElementById('testimonial-track');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update dots
+            testimonialDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            
+            currentSlide = index;
+        }
+
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % testimonialDots.length;
+            showSlide(currentSlide);
+        }, 5000);
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Animation on scroll initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.feature-card, .faq-item');
+            
+            animatedElements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = `all 0.5s ease ${index * 0.1}s`;
+            });
+
+            const animateOnScroll = () => {
+                animatedElements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+                // Add these new animations
+                document.addEventListener('DOMContentLoaded', function() {
+            // Animate chatbot features on scroll
+            const animateOnScroll = () => {
+                document.querySelectorAll('.comparison-card, .benefit-item, .screenshot-item').forEach(el => {
+                    const elTop = el.getBoundingClientRect().top;
+                    const isVisible = (elTop < window.innerHeight - 100);
+                    
+                    if (isVisible && !el.classList.contains('animate__animated')) {
+                        const animation = el.classList.contains('screenshot-item') ? 
+                                          'animate__zoomIn' : 
+                                          el.classList.contains('benefit-item') ?
+                                          (el.classList.contains('animate__fadeInLeft') ? 
+                                           'animate__fadeInLeft' : 'animate__fadeInRight') :
+                                          'animate__fadeInUp';
+                        
+                        el.classList.add('animate__animated', animation);
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+        // Add these new animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate chatbot features on scroll
+            const animateOnScroll = () => {
+                document.querySelectorAll('.comparison-card, .benefit-item, .process-step, .process-arrow').forEach(el => {
+                    const elTop = el.getBoundingClientRect().top;
+                    const isVisible = (elTop < window.innerHeight - 100);
+                    
+                    if (isVisible && !el.classList.contains('animate__animated')) {
+                        const animation = el.classList.contains('process-step') ? 
+                                          'animate__fadeIn' :
+                                          el.classList.contains('process-arrow') ?
+                                          'animate__fadeIn' :
+                                          el.classList.contains('benefit-item') ?
+                                          (el.classList.contains('animate__fadeInLeft') ? 
+                                           'animate__fadeInLeft' : 'animate__fadeInRight') :
+                                          'animate__fadeInUp';
+                        
+                        el.classList.add('animate__animated', animation);
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+
+    </script>
+</body>
+</html>

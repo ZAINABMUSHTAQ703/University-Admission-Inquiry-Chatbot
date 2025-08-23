@@ -1,0 +1,1403 @@
+version: "3.1"
+
+stories:
+- story: installments
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: fee_installment
+    - action: utter_fee_installment
+    - intent: question
+    - action: utter_fee_installment_process
+    - intent: affirm
+    - action: utter_affirm
+    - intent: fee_installment_process
+    - action: utter_fee_installment_process
+    - intent: fee_payment_methods
+    - action: utter_fee_payment_methods
+    - intent: fee_installment_time
+    - action: utter_fee_installment_time
+    - intent: sec_installment
+    - action: utter_sec_installment
+    - intent: affirm
+    - action: utter_affirm
+    - intent: deny
+    - action: utter_my_pleasure
+
+- story: adm
+  steps:
+    - intent: greet    
+    - action: utter_greet   
+    - intent: interested   
+    - action: utter_interested    
+    - intent: BSIT
+    - action: utter_BSIT 
+    - intent: apply_online
+    - action: utter_apply_online
+    - intent: multiple_application  
+    - action: utter_multiple_application   
+    - action: utter_apply_online    
+    - intent: admission_requirements  
+    - action: utter_admission_requirements
+    - intent: registration_fee
+    - action: utter_fee_payment_methods
+    - intent: admission_deadline
+    - action: utter_admission_deadline
+    - intent: affirm
+    - action: utter_affirm
+    - intent: deny
+    - action: utter_my_pleasure
+
+- story: adm cs
+  steps:
+    - intent: greet    
+    - action: utter_greet   
+    - intent: interested   
+    - action: utter_interested    
+    - intent: BSCS
+    - action: utter_BSCS 
+    - intent: apply_online
+    - action: utter_apply_online
+    - intent: multiple_application  
+    - action: utter_multiple_application   
+    - action: utter_apply_online    
+    - intent: admission_requirements  
+    - action: utter_admission_requirements
+    - intent: registration_fee
+    - action: utter_fee_payment_methods
+    - intent: admission_deadline
+    - action: utter_admission_deadline
+    - intent: affirm
+    - action: utter_affirm
+    - intent: deny
+    - action: utter_my_pleasure
+
+- story: adm se
+  steps:
+    - intent: greet    
+    - action: utter_greet   
+    - intent: interested   
+    - action: utter_interested    
+    - intent: BSSE
+    - action: utter_BSSE
+    - intent: apply_online
+    - action: utter_apply_online
+    - intent: multiple_application  
+    - action: utter_multiple_application   
+    - action: utter_apply_online    
+    - intent: admission_requirements  
+    - action: utter_admission_requirements
+    - intent: registration_fee
+    - action: utter_fee_payment_methods
+    - intent: admission_deadline
+    - action: utter_admission_deadline
+    - intent: affirm
+    - action: utter_affirm
+    - intent: deny
+    - action: utter_my_pleasure
+
+- story: Fee concession
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: Fee_Concession_Inquiry
+    - action: utter_Fee_Concession_Inquiry
+    - intent: fee_siblings
+    - action: utter_fee_siblings
+    - intent: kinship_scholarships
+    - action: utter_kinship_scholarships
+    - intent: affirm
+    - action: utter_affirm
+    - intent: deny
+    - action: utter_my_pleasure
+
+- story: transport fac
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: transport
+    - action: utter_transport
+    - intent: transport_busfee
+    - action: utter_transport_busfee
+    - intent: fee_payment_methods
+    - action: utter_fee_payment_methods
+    - intent: bus_timing
+    - action: utter_bus_timing
+    - intent: bus_routes
+    - action: utter_bus_routes
+    - intent: bus_stop_location
+    - action: utter_bus_stop_location
+    - intent: affirm
+    - action: utter_affirm
+    - intent: deny
+    - action: utter_my_pleasure
+
+- story: hostel av
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: Hostel_Availability_Inquiry
+    - action: utter_Hostel_Availability_Inquiry
+    - intent: hostel_fee
+    - action: utter_hostel_fee
+    - intent: fee_payment_methods
+    - action: utter_fee_payment_methods
+    - intent: hostel_facilities
+    - action: utter_hostel_facilities
+    - intent: Hostel_Application_Process
+    - action: utter_Hostel_Application_Process
+    - intent: Hostel_Fee_Online_Payment_Option
+    - action: utter_Hostel_Fee_Online_Payment_Option
+    - intent: Hostel_Facilities_Mess_Availability
+    - action: utter_Hostel_Facilities_Mess_Availability
+    - intent: Hostel_Facilities_Kitchen_Availability
+    - action: utter_Hostel_Facilities_Kitchen_Availability
+    - intent: Hostel_Admin_Office_Location
+    - action: utter_Hostel_Admin_Office_Location
+    - intent: Hostel_Room_Occupancy_Inquiry
+    - action: utter_Hostel_Room_Occupancy_Inquiry
+    - intent: boys_hostel
+    - action: utter_boys_hostel
+    - intent: girls_hostel
+    - action: utter_girls_hostel
+    - intent: affirm
+    - action: utter_affirm
+    - intent: deny
+    - action: utter_my_pleasure
+
+- story: adm check
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: Admission_Eligibility_Intermediate_Marks
+    - action: utter_Admission_Eligibility_Intermediate_Marks
+    - intent: Eligibility_Check_Specific_Program_FSC_Marks
+    - action: utter_Eligibility_Check_Specific_Program_FSC_Marks
+    - intent: Eligibility_Check_Intermediate_Marks
+    - action: utter_Eligibility_Check_Intermediate_Marks
+    - intent: apply_online
+    - action: utter_apply_online
+    - intent: Required_Application_Documents
+    - action: utter_Required_Application_Documents
+    - intent: registration_fee
+    - action: utter_registration_fee
+    - intent: affirm
+    - action: utter_affirm
+    - intent: deny
+    - action: utter_my_pleasure
+
+- story: Greet and inquire about admission process, requirements, and registration fee
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: admission_opening_date
+    - action: utter_admission_opening_date
+    - intent: admission_deadline
+    - action: utter_admission_deadline
+    - intent: admission_requirements
+    - action: utter_admission_requirements
+    - intent: admission_test
+    - action: utter_admission_test
+    - intent: ask_admission
+    - action: utter_apply_online
+    - action: utter_admission_requirements
+    - action: utter_eligibility_criteria
+    - intent: registration_fee
+    - action: utter_registration_fee
+    - intent: thankyou
+    - action: utter_my_pleasure
+
+- story: inquire about admission process
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: admission_process
+    - action: utter_admission_process
+    - intent: admission_opening_date
+    - action: utter_admission_opening_date
+    - intent: admission_requirements
+    - action: utter_admission_requirements
+    - intent: admission_deadline
+    - action: utter_admission_deadline
+    - intent: admission_confirmation
+    - action: utter_admission_confirmation
+    - intent: admission_fee
+    - action: utter_admission_fee
+    - intent: registration_fee
+    - action: utter_registration_fee
+    - intent: eligibility_criteria
+    - action: utter_eligibility_criteria
+    - intent: late_fee_charges
+    - action: utter_late_fee_charges
+    - intent: admission_cancellation_process
+    - action: utter_admission_cancellation_process
+    - intent: admission_cancellation_deadline
+    - action: utter_admission_cancellation_deadline
+    - intent: admission_cancellation_fee
+    - action: utter_admission_cancellation_fee
+    - intent: admission_cancellation_feerefund
+    - action: utter_admission_cancellation_feerefund
+    - intent: fee_payment_methods
+    - action: utter_fee_payment_methods
+
+- story: inquire about transfer process
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: inquire_transfer
+    - action: utter_inquire_transfer
+    - intent: transfer_Department
+    - action: utter_transfer_Department
+    - intent: transfer_ITtoCS
+    - action: utter_transfer_Department
+    - intent: transfer_CStoIT
+    - action: utter_transfer_Department
+    - intent: transfer_CStoSE
+    - action: utter_transfer_Department
+    - intent: transfer_SEtoCS
+    - action: utter_transfer_Department
+    - intent: transfer_SEtoIT
+    - action: utter_transfer_Department
+    - intent: transfer_ITtoSE
+    - action: utter_transfer_Department    
+    - intent: transfer_Department_fee
+    - action: utter_transfer_Department_fee
+
+- story: IT Department Location Inquiry
+  steps:
+    - intent: IT_Department_Location
+    - action: utter_IT_Department_Location
+
+- story: SE Department Location Inquiry
+  steps:
+    - intent: SE_Department_Location
+    - action: utter_SE_Department_Location
+
+- story: CS Department Location Inquiry
+  steps:
+    - intent: CS_Department_Location
+    - action: utter_CS_Department_Location
+
+- story: Admission Eligibility Intermediate Marks Inquiry
+  steps:
+    - intent: Admission_Eligibility_Intermediate_Marks
+    - action: utter_Admission_Eligibility_Intermediate_Marks
+
+- story: Required Application Documents Inquiry
+  steps:
+    - intent: Required_Application_Documents
+    - action: utter_Required_Application_Documents
+
+- story: Application Form Download Location Inquiry
+  steps:
+    - intent: Application_Form_Download_Location
+    - action: utter_Application_Form_Download_Location
+
+- story: Application Fee Inquiry
+  steps:
+    - intent: Application_Fee_Inquiry
+    - action: utter_Application_Fee_Inquiry
+
+- story: Online Admission Fee Payment Option Inquiry
+  steps:
+    - intent: Online_Admission_Fee_Payment_Option
+    - action: utter_Online_Admission_Fee_Payment_Option
+
+- story: Online Fee Payment Instructions Inquiry
+  steps:
+    - intent: Online_Fee_Payment_Instructions
+    - action: utter_Online_Fee_Payment_Instructions
+
+- story: Eligibility Check Specific Program FSC Marks Inquiry
+  steps:
+    - intent: Eligibility_Check_Specific_Program_FSC_Marks
+    - action: utter_Eligibility_Check_Specific_Program_FSC_Marks
+
+- story: Eligibility Check Intermediate Marks Inquiry
+  steps:
+    - intent: Eligibility_Check_Intermediate_Marks
+    - action: utter_Eligibility_Check_Intermediate_Marks
+
+- story: Scholarship Admission Inquiry
+  steps:
+    - intent: Scholarship_Admission_Inquiry
+    - action: utter_Scholarship_Admission_Inquiry
+
+- story: Fee Concession Inquiry
+  steps:
+    - intent: Fee_Concession_Inquiry
+    - action: utter_Fee_Concession_Inquiry
+
+- story: Fee Concession Application Process Inquiry
+  steps:
+    - intent: Fee_Concession_Application_Process
+    - action: utter_Fee_Concession_Application_Process
+
+- story: Hostel Availability Inquiry
+  steps:
+    - intent: Hostel_Availability_Inquiry
+    - action: utter_Hostel_Availability_Inquiry
+
+- story: Girls Hostel Location Inquiry
+  steps:
+    - intent: Girls_Hostel_Location
+    - action: utter_Girls_Hostel_Location
+
+- story: Boys Hostel Location Inquiry
+  steps:
+    - intent: boys_Hostel_Location_Inquiry
+    - action: utter_boys_Hostel_Location_Inquiry
+
+- story: Hostel Application Process Inquiry
+  steps:
+    - intent: Hostel_Application_Process
+    - action: utter_Hostel_Application_Process
+
+- story: Hostel Fee Online Payment Option Inquiry
+  steps:
+    - intent: Hostel_Fee_Online_Payment_Option
+    - action: utter_Hostel_Fee_Online_Payment_Option
+
+- story: Hostel Facilities Mess Availability Inquiry
+  steps:
+    - intent: Hostel_Facilities_Mess_Availability
+    - action: utter_Hostel_Facilities_Mess_Availability
+
+- story: Hostel Facilities Kitchen Availability Inquiry
+  steps:
+    - intent: Hostel_Facilities_Kitchen_Availability
+    - action: utter_Hostel_Facilities_Kitchen_Availability
+
+- story: Hostel Admin Office Location Inquiry
+  steps:
+    - intent: Hostel_Admin_Office_Location
+    - action: utter_Hostel_Admin_Office_Location
+
+- story: Hostel Room Occupancy Inquiry
+  steps:
+    - intent: Hostel_Room_Occupancy_Inquiry
+    - action: utter_Hostel_Room_Occupancy_Inquiry
+
+- story: fee hafizquran
+  steps:
+    - intent: fee_hafizquran
+    - action: utter_fee_hafizquran
+
+- story: fee siblings
+  steps:
+    - intent: fee_siblings
+    - action: utter_fee_siblings
+
+- story: fee orphan
+  steps:
+    - intent: fee_orphan
+    - action: utter_fee_orphan
+
+- story: SE_merit date
+  steps:
+    - intent: SE_merit_date
+    - action: utter_meritlist_date
+    - action: utter_meritlist_check
+
+- story: IT_merit date
+  steps:
+    - intent: IT_merit_date
+    - action: utter_meritlist_date
+    - action: utter_meritlist_check
+
+- story: CS_merit date
+  steps:
+    - intent: CS_merit_date
+    - action: utter_meritlist_date
+    - action: utter_meritlist_check
+
+- story: program up
+  steps:
+    - intent: program_up
+    - action: utter_programup
+
+- story: pdff
+  steps:
+    - intent: randompdf
+    - action: utter_pdf
+
+- story: greet1aa
+  steps: 
+    - intent: greet1
+    - action: utter_greet1
+
+- story: interested in admission
+  steps: 
+    - intent: interested
+    - action: utter_interested
+
+- story: greet and goodbye
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: greet and inquire about programs
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: inquire_program
+    - action: utter_inquire_program
+
+- story: Cs merit cri
+  steps:
+    - intent: CS_merit_c
+    - action: utter_CS_merit
+
+- story: se merit cri
+  steps:
+    - intent: SE_merit_c
+    - action: utter_SE_merit
+
+- story: it merit cri
+  steps:
+    - intent: IT_merit_c
+    - action: utter_IT_merit
+
+- story: hostelllboys
+  steps: 
+    - intent: boys_hostel
+    - action: utter_boys_hostel
+
+- story: hostelllgirls
+  steps: 
+    - intent: girls_hostel
+    - action: utter_girls_hostel
+
+- story: greet
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: bot_challenge
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+- story: thankyou
+  steps:
+    - intent: thankyou
+    - action: utter_my_pleasure
+
+- story: apply_online
+  steps:
+    - intent: apply_online
+    - action: utter_apply_online
+
+- story: ask_admission
+  steps:
+    - intent: ask_admission
+    - action: utter_admission_process
+
+- story: admission_process
+  steps:
+    - intent: admission_process
+    - action: utter_admission_process
+
+- story: admission_opening_date
+  steps:
+    - intent: admission_opening_date
+    - action: utter_admission_opening_date
+
+- story: admission_requirements
+  steps:
+    - intent: admission_requirements
+    - action: utter_admission_requirements
+
+- story: admission_deadline
+  steps:
+    - intent: admission_deadline
+    - action: utter_admission_deadline
+
+- story: admission_confirmation
+  steps:
+    - intent: admission_confirmation
+    - action: utter_admission_confirmation
+
+- story: admission_test
+  steps:
+    - intent: admission_test
+    - action: utter_admission_test
+
+- story: admission_fee
+  steps:
+    - intent: admission_fee
+    - action: utter_admission_fee
+
+- story: registration_fee
+  steps:
+    - intent: registration_fee
+    - action: utter_registration_fee
+
+- story: eligibility_criteria
+  steps:
+    - intent: eligibility_criteria
+    - action: utter_eligibility_criteria
+
+- story: late_fee_charges
+  steps:
+    - intent: late_fee_charges
+    - action: utter_late_fee_charges
+
+- story: admission_cancellation_process
+  steps:
+    - intent: admission_cancellation_process
+    - action: utter_admission_cancellation_process
+
+- story: admission_cancellation_deadline
+  steps:
+    - intent: admission_cancellation_deadline
+    - action: utter_admission_cancellation_deadline
+
+- story: admission_cancellation_fee
+  steps:
+    - intent: admission_cancellation_fee
+    - action: utter_admission_cancellation_fee
+
+- story: admission_cancellation_feerefund
+  steps:
+    - intent: admission_cancellation_feerefund
+    - action: utter_admission_cancellation_feerefund
+
+- story: fee_payment_methods
+  steps:
+    - intent: fee_payment_methods
+    - action: utter_fee_payment_methods
+
+- story: inquire_program
+  steps:
+    - intent: inquire_program
+    - action: utter_inquire_program
+
+- story: CS_eligibility_criteria
+  steps:
+    - intent: CS_eligibility_criteria
+    - action: utter_CS_eligibility
+
+- story: CS_courses
+  steps:
+    - intent: CS_courses
+    - action: utter_CS_courses
+
+- story: CS_career
+  steps:
+    - intent: CS_career
+    - action: utter_CS_career
+
+- story: CS_Program_duration
+  steps:
+    - intent: CS_Program_duration
+    - action: utter_CS_Program_duration
+
+- story: CS_faculty
+  steps:
+    - intent: CS_faculty
+    - action: utter_CS_faculty
+
+- story: CS_semester_feees
+  steps:
+    - intent: CS_semester_fee
+    - action: utter_CS_semester_fee
+
+- story: CS_internship_opportunities
+  steps:
+    - intent: CS_internship_opportunities
+    - action: utter_CS_internship_opportunities
+
+- story: CS_jobs
+  steps:
+    - intent: CS_jobs
+    - action: utter_CS_jobs
+
+- story: IT_eligibility_criteria
+  steps:
+    - intent: IT_eligibility_criteria
+    - action: utter_IT_eligibility
+
+- story: IT_courses
+  steps:
+    - intent: IT_courses
+    - action: utter_IT_courses
+
+- story: IT_career
+  steps:
+    - intent: IT_career
+    - action: utter_IT_career
+
+- story: IT_Program_duration
+  steps:
+    - intent: IT_Program_duration
+    - action: utter_IT_Program_duration
+
+- story: IT_faculty
+  steps:
+    - intent: IT_faculty
+    - action: utter_IT_faculty
+
+- story: IT_semester_feess
+  steps:
+    - intent: IT_semester_fee
+    - action: utter_IT_semester_fee
+
+- story: IT_internship_opportunities
+  steps:
+    - intent: IT_internship_opportunities
+    - action: utter_IT_internship_opportunities
+
+- story: IT_jobs
+  steps:
+    - intent: IT_jobs
+    - action: utter_IT_jobs
+
+- story: SE_eligibility_criteria
+  steps:
+    - intent: SE_eligibility_criteria
+    - action: utter_SE_eligibility
+
+- story: SE_courses
+  steps:
+    - intent: SE_courses
+    - action: utter_SE_courses
+
+- story: SE_career
+  steps:
+    - intent: SE_career
+    - action: utter_SE_career
+
+- story: SE_Program_duration
+  steps:
+    - intent: SE_Program_duration
+    - action: utter_SE_Program_duration
+
+- story: SE_faculty
+  steps:
+    - intent: SE_faculty
+    - action: utter_SE_faculty
+
+- story: SE_semester_feess
+  steps:
+    - intent: SE_semester_fee
+    - action: utter_SE_semester_fee
+
+- story: SE_internship_opportunities
+  steps:
+    - intent: SE_internship_opportunities
+    - action: utter_SE_internship_opportunities
+
+- story: SE_jobs
+  steps:
+    - intent: SE_jobs
+    - action: utter_SE_jobs
+
+- story: inquire_transfer
+  steps:
+    - intent: inquire_transfer
+    - action: utter_inquire_transfer
+
+- story: transfer_Department
+  steps:
+    - intent: transfer_Department
+    - action: utter_transfer_Department
+
+- story: transfer_Department_fee
+  steps:
+    - intent: transfer_Department_fee
+    - action: utter_transfer_Department_fee
+
+- story: meritlist_criteria
+  steps:
+    - intent: meritlist_criteria
+    - action: utter_meritlist_criteria
+
+- story: meritlist_date
+  steps:
+    - intent: meritlist_date
+    - action: utter_meritlist_date
+
+- story: meritlist_check
+  steps:
+    - intent: meritlist_check
+    - action: utter_meritlist_check
+
+- story: meritlist_waitinglist
+  steps:
+    - intent: meritlist_waitinglist
+    - action: utter_meritlist_waitinglist
+
+- story: classes_duration
+  steps:
+    - intent: classes_duration
+    - action: utter_classes_duration
+
+- story: classes_timetable
+  steps:
+    - intent: classes_timetable
+    - action: utter_classes_timetable
+
+- story: classes_break
+  steps:
+    - intent: classes_break
+    - action: utter_classes_break
+
+- story: classes_size
+  steps:
+    - intent: classes_size
+    - action: utter_classes_size
+
+- story: detail process
+  steps:
+    - intent: adm_process_detail
+    - action: utter_adm_process_detail
+
+- story: transport
+  steps:
+    - intent: transport
+    - action: utter_transport
+
+- story: transport_busfee
+  steps:
+    - intent: transport_busfee
+    - action: utter_transport_busfee
+
+- story: hostel_application_deadline
+  steps:
+    - intent: hostel_application_deadline
+    - action: utter_hostel_application_deadline
+
+- story: hostel_fee
+  steps:
+    - intent: hostel_fee
+    - action: utter_hostel_fee
+
+- story: hostel_rules
+  steps:
+    - intent: hostel_rules
+    - action: utter_hostel_rules
+
+- story: hostel_facilities
+  steps:
+    - intent: hostel_facilities
+    - action: utter_hostel_facilities
+
+- story: hostel_foodquality
+  steps:
+    - intent: hostel_foodquality
+    - action: utter_hostel_foodquality
+
+- story: dress_code
+  steps:
+    - intent: dress_code
+    - action: utter_dress_code
+
+- story: campus_location
+  steps:
+    - intent: campus_location
+    - action: utter_campus_location
+
+- story: campus_safety
+  steps:
+    - intent: campus_safety
+    - action: utter_campus_safety
+
+- story: campus_hours
+  steps:
+    - intent: campus_hours
+    - action: utter_campus_hours
+
+- story: uos_history
+  steps:
+    - intent: uos_history
+    - action: utter_uos_history
+
+- story: uos_vision
+  steps:
+    - intent: uos_vision
+    - action: utter_uos_vision
+
+- story: uos_mission
+  steps:
+    - intent: uos_mission
+    - action: utter_uos_mission
+
+- story: uos_values
+  steps:
+    - intent: uos_values
+    - action: utter_uos_values
+
+- story: uos_vicechancellor
+  steps:
+    - intent: uos_vicechancellor
+    - action: utter_uos_vicechancellor
+
+- story: inquire_scholarship
+  steps:
+    - intent: inquire_scholarship
+    - action: utter_inquire_scholarship
+
+- story: kinship_scholarships
+  steps:
+    - intent: kinship_scholarships
+    - action: utter_kinship_scholarships
+    - action: utter_kinship_scholarships_eligibility
+    - action: utter_kinship_scholarships_howtoapply
+
+- story: kinship_scholarships_eligibility
+  steps:
+    - intent: kinship_scholarships_eligibility
+    - action: utter_kinship_scholarships_eligibility
+
+- story: kinship_scholarships_howtoapply
+  steps:
+    - intent: kinship_scholarships_howtoapply
+    - action: utter_kinship_scholarships_howtoapply
+
+- story: hafiz_quran_scholarship
+  steps:
+    - intent: hafiz_quran_scholarship
+    - action: utter_hafiz_quran_scholarships
+    - action: utter_hafiz_quran_scholarships_eligibility
+    - action: utter_hafiz_quran_scholarships_howtoapply
+
+- story: hafiz_quran_scholarship_eligibility
+  steps:
+    - intent: hafiz_quran_scholarship_eligibility
+    - action: utter_hafiz_quran_scholarships_eligibility
+
+- story: hafiz_quran_scholarship_how_to_apply
+  steps:
+    - intent: hafiz_quran_scholarship_how_to_apply
+    - action: utter_hafiz_quran_scholarships_howtoapply
+
+- story: hec_need_based_scholarship
+  steps:
+    - intent: hec_need_based_scholarship
+    - action: utter_hec_need_based_scholarship
+    - action: utter_hec_need_based_scholarship_eligibility
+    - action: utter_hec_need_based_scholarship_howtoapply
+
+- story: fee inst
+  steps:
+    - intent: fee_installment
+    - action: utter_fee_installment
+
+- story:  fee inst pro
+  steps:
+    - intent: fee_installment_process
+    - action: utter_fee_installment_process
+
+- story: affirmation
+  steps: 
+    - intent: affirm
+    - action: utter_affirm
+
+- story: hod it
+  steps: 
+    - intent: HOD_IT
+    - action: utter_HOD_IT
+
+- story: hod cs
+  steps: 
+    - intent: HOD_CS
+    - action: utter_HOD_CS
+
+- story: hod SE
+  steps: 
+    - intent: HOD_SE
+    - action: utter_HOD_SE
+
+- story: inquire about transfer process
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: inquire_transfer
+    - action: utter_inquire_transfer
+    - intent: transfer_Department
+    - action: utter_transfer_Department
+    - intent: transfer_Department_fee
+    - action: utter_transfer_Department_fee
+    - intent: transfer_ITtoCS
+    - action: utter_transfer_Department
+    - intent: transfer_CStoIT
+    - action: utter_transfer_Department
+    - intent: transfer_CStoSE
+    - action: utter_transfer_Department
+    - intent: transfer_SEtoCS
+    - action: utter_transfer_Department
+    - intent: transfer_SEtoIT
+    - action: utter_transfer_Department
+    - intent: transfer_ITtoSE
+    - action: utter_transfer_Department 
+
+- story: hec_need_based_scholarship_eligibility
+  steps:
+    - intent: hec_need_based_scholarship_eligibility
+    - action: utter_hec_need_based_scholarship_eligibility
+
+- story: hec_need_based_scholarship_how_to_apply
+  steps:
+    - intent: hec_need_based_scholarship_how_to_apply
+    - action: utter_hec_need_based_scholarship_howtoapply
+
+- story: honhaar_scholarship
+  steps:
+    - intent: honhaar_scholarship
+    - action: utter_honhaar_scholarship
+    - action: utter_honhaar_scholarship_eligibility
+    - action: utter_honhaar_scholarship_howtoapply
+
+- story: honhaar_scholarship_eligibility
+  steps:
+    - intent: honhaar_scholarship_eligibility
+    - action: utter_honhaar_scholarship_eligibility
+
+- story: honhaar_scholarship_how_to_apply
+  steps:
+    - intent: honhaar_scholarship_how_to_apply
+    - action: utter_honhaar_scholarship_howtoapply
+
+- story: benazir_scholarship
+  steps:
+    - intent: benazir_scholarship
+    - action: utter_benazir_scholarship
+    - action: utter_benazir_scholarship_eligibility
+    - action: utter_benazir_scholarship_howtoapply
+
+- story: benazir_scholarship_eligibility
+  steps:
+    - intent: benazir_scholarship_eligibility
+    - action: utter_benazir_scholarship_eligibility
+
+- story: benazir_scholarship_how_to_apply
+  steps:
+    - intent: benazir_scholarship_how_to_apply
+    - action: utter_benazir_scholarship_howtoapply
+
+- story: diya_pakistan_scholarship
+  steps:
+    - intent: diya_pakistan_scholarship
+    - action: utter_diya_pakistan_scholarship
+    - action: utter_diya_pakistan_scholarship_eligibility
+    - action: utter_diya_pakistan_scholarship_howtoapply
+
+- story: diya_pakistan_scholarship_eligibility
+  steps:
+    - intent: diya_pakistan_scholarship_eligibility
+    - action: utter_diya_pakistan_scholarship_eligibility
+
+- story: diya_pakistan_scholarship_how_to_apply
+  steps:
+    - intent: diya_pakistan_scholarship_how_to_apply
+    - action: utter_diya_pakistan_scholarship_howtoapply
+
+- story: pakistan_bait_ul_mal_scholarship
+  steps:
+    - intent: pakistan_bait_ul_mal_scholarship
+    - action: utter_pakistan_bait_ul_mal_scholarship
+    - action: utter_pakistan_bait_ul_mal_scholarship_eligibility
+    - action: utter_pakistan_bait_ul_mal_scholarship_howtoapply
+
+- story: pakistan_bait_ul_mal_scholarship_eligibility
+  steps:
+    - intent: pakistan_bait_ul_mal_scholarship_eligibility
+    - action: utter_pakistan_bait_ul_mal_scholarship_eligibility
+
+- story: pakistan_bait_ul_mal_scholarship_how_to_apply
+  steps:
+    - intent: pakistan_bait_ul_mal_scholarship_how_to_apply
+    - action: utter_pakistan_bait_ul_mal_scholarship_howtoapply
+
+- story: scotland_young_women_scholarship
+  steps:
+    - intent: scotland_young_women_scholarship
+    - action: utter_scotland_young_women_scholarship
+    - action: utter_scotland_young_women_scholarship_eligibility
+    - action: utter_scotland_young_women_scholarship_howtoapply
+
+- story: scotland_young_women_scholarship_eligibility
+  steps:
+    - intent: scotland_young_women_scholarship_eligibility
+    - action: utter_scotland_young_women_scholarship_eligibility
+
+- story: scotland_young_women_scholarship_how_to_apply
+  steps:
+    - intent: scotland_young_women_scholarship_how_to_apply
+    - action: utter_scotland_young_women_scholarship_howtoapply
+
+- story: peef_scholarship
+  steps:
+    - intent: peef_scholarship
+    - action: utter_peef_scholarship
+    - action: utter_peef_scholarship_eligibility
+    - action: utter_peef_scholarship_howtoapply
+
+- story: peef_scholarship_eligibility
+  steps:
+    - intent: peef_scholarship_eligibility
+    - action: utter_peef_scholarship_eligibility
+
+- story: peef_scholarship_how_to_apply
+  steps:
+    - intent: peef_scholarship_how_to_apply
+    - action: utter_peef_scholarship_howtoapply
+
+- story: hec_employees_fee_exemption
+  steps:
+    - intent: hec_employees_fee_exemption
+    - action: utter_hec_employees_fee_exemption
+    - action: utter_hec_employees_fee_exemption_eligibility
+    - action: utter_hec_employees_fee_exemption_howtoapply
+
+- story: hec_employees_fee_exemption_eligibility
+  steps:
+    - intent: hec_employees_fee_exemption_eligibility
+    - action: utter_hec_employees_fee_exemption_eligibility
+
+- story: hec_employees_fee_exemption_how_to_apply
+  steps:
+    - intent: hec_employees_fee_exemption_how_to_apply
+    - action: utter_hec_employees_fee_exemption_howtoapply
+
+- story: sos_children_village_scholarship
+  steps:
+    - intent: sos_children_village_scholarship
+    - action: utter_sos_children_village_scholarship
+    - action: utter_sos_children_village_scholarship_eligibility
+    - action: utter_sos_children_village_scholarship_howtoapply
+
+- story: sos_children_village_scholarship_eligibility
+  steps:
+    - intent: sos_children_village_scholarship_eligibility
+    - action: utter_sos_children_village_scholarship_eligibility
+
+- story: sos_children_village_scholarship_how_to_apply
+  steps:
+    - intent: sos_children_village_scholarship_how_to_apply
+    - action: utter_sos_children_village_scholarship_howtoapply
+
+- story: martyrs_family_scholarship
+  steps:
+    - intent: martyrs_family_scholarship
+    - action: utter_martyrs_family_scholarship
+    - action: utter_martyrs_family_scholarship_eligibility
+    - action: utter_martyrs_family_scholarship_howtoapply
+
+- story: martyrs_family_scholarship_eligibility
+  steps:
+    - intent: martyrs_family_scholarship_eligibility
+    - action: utter_martyrs_family_scholarship_eligibility
+
+- story: martyrs_family_scholarship_how_to_apply
+  steps:
+    - intent: martyrs_family_scholarship_how_to_apply
+    - action: utter_martyrs_family_scholarship_howtoapply
+
+- story: differently_abled_scholarship
+  steps:
+    - intent: differently_abled_scholarship
+    - action: utter_differently_abled_scholarship
+    - action: utter_differently_abled_scholarship_eligibility
+    - action: utter_differently_abled_scholarship_howtoapply
+
+- story: differently_abled_scholarship_eligibility
+  steps:
+    - intent: differently_abled_scholarship_eligibility
+    - action: utter_differently_abled_scholarship_eligibility
+
+- story: differently_abled_scholarship_how_to_apply
+  steps:
+    - intent: differently_abled_scholarship_how_to_apply
+    - action: utter_differently_abled_scholarship_howtoapply
+
+- story: deserving_orphan_scholarship
+  steps:
+    - intent: deserving_orphan_scholarship
+    - action: utter_deserving_orphan_scholarship
+    - action: utter_deserving_orphan_scholarship_eligibility
+    - action: utter_deserving_orphan_scholarship_howtoapply
+
+- story: deserving_orphan_scholarship_eligibility
+  steps:
+    - intent: deserving_orphan_scholarship_eligibility
+    - action: utter_deserving_orphan_scholarship_eligibility
+
+- story: deserving_orphan_scholarship_how_to_apply
+  steps:
+    - intent: deserving_orphan_scholarship_how_to_apply
+    - action: utter_deserving_orphan_scholarship_howtoapply
+
+- story: university_employees_scholarship
+  steps:
+    - intent: university_employees_scholarship
+    - action: utter_university_employees_scholarship
+    - action: utter_university_employees_scholarship_eligibility
+    - action: utter_university_employees_scholarship_howtoapply
+
+- story: university_employees_scholarship_eligibility
+  steps:
+    - intent: university_employees_scholarship_eligibility
+    - action: utter_university_employees_scholarship_eligibility
+
+- story: university_employees_scholarship_how_to_apply
+  steps:
+    - intent: university_employees_scholarship_how_to_apply
+    - action: utter_university_employees_scholarship_howtoapply
+
+- story: sports_based_scholarship
+  steps:
+    - intent: sports_based_scholarship
+    - action: utter_sports_based_scholarship
+    - action: utter_sports_based_scholarship_eligibility
+    - action: utter_sports_based_scholarship_howtoapply
+
+- story: sports_based_scholarship_eligibility
+  steps:
+    - intent: sports_based_scholarship_eligibility
+    - action: utter_sports_based_scholarship_eligibility
+
+- story: sports_based_scholarship_how_to_apply
+  steps:
+    - intent: sports_based_scholarship_how_to_apply
+    - action: utter_sports_based_scholarship_howtoapply
+
+- story: position_holders_scholarship
+  steps:
+    - intent: position_holders_scholarship
+    - action: utter_position_holders_scholarship
+    - action: utter_position_holders_scholarship_eligibility
+    - action: utter_position_holders_scholarship_howtoapply
+
+- story: position_holders_scholarship_eligibility
+  steps:
+    - intent: position_holders_scholarship_eligibility
+    - action: utter_position_holders_scholarship_eligibility
+
+- story: position_holders_scholarship_how_to_apply
+  steps:
+    - intent: position_holders_scholarship_how_to_apply
+    - action: utter_position_holders_scholarship_howtoapply
+
+- story: idps_scholarship
+  steps:
+    - intent: idps_scholarship
+    - action: utter_idps_scholarship
+    - action: utter_idps_scholarship_eligibility
+    - action: utter_idps_scholarship_howtoapply
+
+- story: idps_scholarship_eligibility
+  steps:
+    - intent: idps_scholarship_eligibility
+    - action: utter_idps_scholarship_eligibility
+
+- story: idps_scholarship_how_to_apply
+  steps:
+    - intent: idps_scholarship_how_to_apply
+    - action: utter_idps_scholarship_howtoapply
+
+- story: children_spouse_shaheed_scholarship
+  steps:
+    - intent: children_spouse_shaheed_scholarship
+    - action: utter_children_spouse_shaheed_scholarship
+    - action: utter_children_spouse_shaheed_scholarship_eligibility
+    - action: utter_children_spouse_shaheed_scholarship_howtoapply
+
+- story: children_spouse_shaheed_scholarship_eligibility
+  steps:
+    - intent: children_spouse_shaheed_scholarship_eligibility
+    - action: utter_children_spouse_shaheed_scholarship_eligibility
+
+- story: children_spouse_shaheed_scholarship_how_to_apply
+  steps:
+    - intent: children_spouse_shaheed_scholarship_how_to_apply
+    - action: utter_children_spouse_shaheed_scholarship_howtoapply
+
+- story: 505_village_students_scholarship
+  steps:
+    - intent: 505_village_students_scholarship
+    - action: utter_505_village_students_scholarship
+    - action: utter_505_village_students_scholarship_eligibility
+    - action: utter_505_village_students_scholarship_howtoapply
+
+- story: 505_village_students_scholarship_eligibility
+  steps:
+    - intent: 505_village_students_scholarship_eligibility
+    - action: utter_505_village_students_scholarship_eligibility
+
+- story: 505_village_students_scholarship_how_to_apply
+  steps:
+    - intent: 505_village_students_scholarship_how_to_apply
+    - action: utter_505_village_students_scholarship_howtoapply
+
+- story: hec_employees_scholarship
+  steps:
+    - intent: hec_employees_scholarship
+    - action: utter_hec_employees_scholarship
+    - action: utter_hec_employees_scholarship_eligibility
+    - action: utter_hec_employees_scholarship_howtoapply
+
+- story: hec_employees_scholarship_eligibility
+  steps:
+    - intent: hec_employees_scholarship_eligibility
+    - action: utter_hec_employees_scholarship_eligibility
+
+- story: hec_employees_scholarship_how_to_apply
+  steps:
+    - intent: hec_employees_scholarship_how_to_apply
+    - action: utter_hec_employees_scholarship_howtoapply
+
+- story: scottish_scholarship
+  steps:
+    - intent: scottish_scholarship
+    - action: utter_scottish_scholarship
+    - action: utter_scottish_scholarship_eligibility
+    - action: utter_scottish_scholarship_howtoapply
+
+- story: scottish_scholarship_eligibility
+  steps:
+    - intent: scottish_scholarship_eligibility
+    - action: utter_scottish_scholarship_eligibility
+
+- story: scottish_scholarship_how_to_apply
+  steps:
+    - intent: scottish_scholarship_how_to_apply
+    - action: utter_scottish_scholarship_howtoapply
+
+- story: ilc_need_based_scholarship
+  steps:
+    - intent: ilc_need_based_scholarship
+    - action: utter_ilc_need_based_scholarship
+    - action: utter_ilc_need_based_scholarship_eligibility
+    - action: utter_ilc_need_based_scholarship_howtoapply
+
+- story: ilc_need_based_scholarship_eligibility
+  steps:
+    - intent: ilc_need_based_scholarship_eligibility
+    - action: utter_ilc_need_based_scholarship_eligibility
+
+- story: ilc_need_based_scholarship_how_to_apply
+  steps:
+    - intent: ilc_need_based_scholarship_how_to_apply
+    - action: utter_ilc_need_based_scholarship_howtoapply
+
+- story: minority_scholarship
+  steps:
+    - intent: minority_scholarship
+    - action: utter_minority_scholarship
+    - action: utter_minority_scholarship_eligibility
+    - action: utter_minority_scholarship_howtoapply
+
+- story: minority_scholarship_eligibility
+  steps:
+    - intent: minority_scholarship_eligibility
+    - action: utter_minority_scholarship_eligibility
+
+- story: minority_scholarship_how_to_apply
+  steps:
+    - intent: minority_scholarship_how_to_apply
+    - action: utter_minority_scholarship_howtoapply
+
+- story: beef_scholarship
+  steps:
+    - intent: beef_scholarship
+    - action: utter_beef_scholarship
+    - action: utter_beef_scholarship_eligibility
+    - action: utter_beef_scholarship_howtoapply
+
+- story: beef_scholarship_eligibility
+  steps:
+    - intent: beef_scholarship_eligibility
+    - action: utter_beef_scholarship_eligibility
+
+- story: beef_scholarship_how_to_apply
+  steps:
+    - intent: beef_scholarship_how_to_apply
+    - action: utter_beef_scholarship_howtoapply
+
+- story: sacra_scholarship
+  steps:
+    - intent: sacra_scholarship
+    - action: utter_sacra_scholarship
+    - action: utter_sacra_scholarship_eligibility
+    - action: utter_sacra_scholarship_howtoapply
+
+- story: sacra_scholarship_eligibility
+  steps:
+    - intent: sacra_scholarship_eligibility
+    - action: utter_sacra_scholarship_eligibility
+
+- story: sacra_scholarship_how_to_apply
+  steps:
+    - intent: sacra_scholarship_how_to_apply
+    - action: utter_sacra_scholarship_howtoapply
+
+- story: multiple_app
+  steps: 
+    - intent: multiple_application
+    - action: utter_multiple_application
+
+- story: contact_info
+  steps:
+    - intent: contact_information
+    - action: utter_contact_information
+  
+- story: adm_process_dur
+  steps:
+    - intent: admission_process_duration
+    - action: utter_admission_process_duration
+
+- story: academic_cal
+  steps:
+    - intent: academic_calendar
+    - action: utter_academic_calendar
+
+- story: inq_msit
+  steps: 
+    - intent: inquire_program
+    - action: utter_inquire_program
+    - intent: MSIT
+    - action: utter_MSIT
+
+- story: inq_mscs
+  steps: 
+    - intent: inquire_program
+    - action: utter_inquire_program
+    - intent: MSCS
+    - action: utter_MSCS
+
+- story: inq_msse
+  steps: 
+    - intent: inquire_program
+    - action: utter_inquire_program
+    - intent: MSSE
+    - action: utter_MSSE
+
+- story: inq_bsit
+  steps: 
+    - intent: inquire_program
+    - action: utter_inquire_program
+    - intent: BSIT
+    - action: utter_BSIT
+
+- story: inq_bscs
+  steps: 
+    - intent: inquire_program
+    - action: utter_inquire_program
+    - intent: BSCS
+    - action: utter_BSCS
+
+- story: inq_bsse
+  steps: 
+    - intent: inquire_program
+    - action: utter_inquire_program
+    - intent: BSSE
+    - action: utter_BSSE

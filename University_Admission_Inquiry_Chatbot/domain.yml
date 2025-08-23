@@ -1,0 +1,1131 @@
+version: "3.1"
+
+intents:
+  - question
+  - bus_timing
+  - bus_stop_location
+  - bus_routes
+  - sec_installment
+  - fee_installment_time
+  - deny
+  - nlu_fallback
+  - randompdf
+  - greet
+  - greet1
+  - interested
+  - goodbye
+  - bot_challenge
+  - program_up
+  - thankyou
+  - apply_online
+  - multiple_application
+  - ask_admission
+  - admission_process
+  - adm_process_detail
+  - admission_process_duration
+  - academic_calendar
+  - admission_opening_date
+  - admission_requirements
+  - admission_deadline
+  - admission_confirmation
+  - admission_test
+  - admission_fee
+  - registration_fee
+  - eligibility_criteria
+  - late_fee_charges
+  - admission_cancellation_process
+  - admission_cancellation_deadline
+  - admission_cancellation_fee
+  - admission_cancellation_feerefund
+  - fee_payment_methods
+  - inquire_program
+  - MSIT
+  - MSCS
+  - MSSE
+  - BSIT
+  - BSCS
+  - BSSE
+  - CS_eligibility_criteria
+  - CS_courses
+  - CS_career
+  - CS_Program_duration
+  - CS_faculty
+  - CS_semester_fee
+  - CS_internship_opportunities
+  - CS_jobs
+  - IT_eligibility_criteria
+  - IT_courses
+  - IT_career
+  - IT_Program_duration
+  - IT_faculty
+  - IT_semester_fee
+  - IT_internship_opportunities
+  - IT_jobs
+  - SE_eligibility_criteria
+  - SE_courses
+  - SE_career
+  - SE_Program_duration
+  - SE_faculty
+  - SE_semester_fee
+  - SE_internship_opportunities
+  - SE_jobs
+  - SE_merit_c
+  - IT_merit_c
+  - CS_merit_c
+  - SE_merit_date
+  - IT_merit_date
+  - CS_merit_date
+  - boys_hostel
+  - girls_hostel
+  - inquire_transfer
+  - transfer_Department
+  - transfer_Department_fee
+  - transfer_ITtoCS
+  - transfer_CStoIT
+  - transfer_CStoSE
+  - transfer_SEtoCS
+  - transfer_SEtoIT
+  - transfer_ITtoSE
+  - meritlist_criteria
+  - meritlist_date
+  - meritlist_check
+  - meritlist_waitinglist
+  - classes_duration
+  - classes_timetable
+  - classes_break
+  - classes_size
+  - transport
+  - transport_busfee
+  - hostel_application_deadline
+  - hostel_fee
+  - hostel_rules
+  - hostel_facilities
+  - hostel_foodquality
+  - dress_code
+  - campus_location
+  - campus_safety
+  - campus_hours
+  - uos_history
+  - uos_vision
+  - uos_mission
+  - uos_values
+  - contact_information
+  - uos_vicechancellor
+  - inquire_scholarship
+  - kinship_scholarships
+  - kinship_scholarships_eligibility
+  - kinship_scholarships_howtoapply
+  - hafiz_quran_scholarship   
+  - hafiz_quran_scholarship_eligibility
+  - hafiz_quran_scholarship_how_to_apply
+  - honhaar_scholarship
+  - honhaar_scholarship_eligibility
+  - honhaar_scholarship_how_to_apply
+  - hec_need_based_scholarship
+  - hec_need_based_scholarship_eligibility
+  - hec_need_based_scholarship_how_to_apply
+  - benazir_scholarship
+  - benazir_scholarship_eligibility
+  - benazir_scholarship_how_to_apply
+  - diya_pakistan_scholarship
+  - diya_pakistan_scholarship_eligibility
+  - diya_pakistan_scholarship_how_to_apply
+  - pakistan_bait_ul_mal_scholarship
+  - pakistan_bait_ul_mal_scholarship_eligibility
+  - pakistan_bait_ul_mal_scholarship_how_to_apply
+  - scotland_young_women_scholarship
+  - scotland_young_women_scholarship_eligibility
+  - scotland_young_women_scholarship_how_to_apply
+  - peef_scholarship
+  - peef_scholarship_eligibility
+  - peef_scholarship_how_to_apply
+  - hec_employees_fee_exemption
+  - hec_employees_fee_exemption_eligibility
+  - hec_employees_fee_exemption_how_to_apply
+  - sos_children_village_scholarship
+  - sos_children_village_scholarship_eligibility
+  - sos_children_village_scholarship_how_to_apply
+  - martyrs_family_scholarship
+  - martyrs_family_scholarship_eligibility
+  - martyrs_family_scholarship_how_to_apply
+  - differently_abled_scholarship
+  - differently_abled_scholarship_eligibility
+  - differently_abled_scholarship_how_to_apply
+  - deserving_orphan_scholarship
+  - deserving_orphan_scholarship_eligibility
+  - deserving_orphan_scholarship_how_to_apply
+  - university_employees_scholarship
+  - university_employees_scholarship_eligibility
+  - university_employees_scholarship_how_to_apply
+  - sports_based_scholarship
+  - sports_based_scholarship_eligibility
+  - sports_based_scholarship_how_to_apply
+  - position_holders_scholarship
+  - position_holders_scholarship_eligibility
+  - position_holders_scholarship_how_to_apply
+  - idps_scholarship
+  - idps_scholarship_eligibility
+  - idps_scholarship_how_to_apply
+  - children_spouse_shaheed_scholarship
+  - children_spouse_shaheed_scholarship_eligibility
+  - children_spouse_shaheed_scholarship_how_to_apply
+  - 505_village_students_scholarship
+  - 505_village_students_scholarship_eligibility
+  - 505_village_students_scholarship_how_to_apply
+  - hec_employees_scholarship
+  - hec_employees_scholarship_eligibility
+  - hec_employees_scholarship_how_to_apply
+  - scottish_scholarship
+  - scottish_scholarship_eligibility
+  - scottish_scholarship_how_to_apply
+  - ilc_need_based_scholarship
+  - ilc_need_based_scholarship_eligibility
+  - ilc_need_based_scholarship_how_to_apply
+  - minority_scholarship
+  - minority_scholarship_eligibility
+  - minority_scholarship_how_to_apply
+  - beef_scholarship
+  - beef_scholarship_eligibility
+  - beef_scholarship_how_to_apply
+  - sacra_scholarship
+  - sacra_scholarship_eligibility
+  - sacra_scholarship_how_to_apply
+  - out_of_scope
+  - IT_Department_Location
+  - SE_Department_Location
+  - CS_Department_Location
+  - Admission_Eligibility_Intermediate_Marks
+  - Required_Application_Documents
+  - Application_Form_Download_Location
+  - Application_Fee_Inquiry  
+  - Online_Admission_Fee_Payment_Option
+  - Online_Fee_Payment_Instructions
+  - Eligibility_Check_Specific_Program_FSC_Marks
+  - Eligibility_Check_Intermediate_Marks
+  - Scholarship_Admission_Inquiry
+  - Fee_Concession_Inquiry
+  - Fee_Concession_Application_Process
+  - Hostel_Availability_Inquiry
+  - Girls_Hostel_Location
+  - boys_Hostel_Location_Inquiry
+  - Hostel_Application_Process
+  - Hostel_Fee_Online_Payment_Option
+  - Hostel_Facilities_Mess_Availability
+  - Hostel_Facilities_Kitchen_Availability
+  - Hostel_Admin_Office_Location
+  - Hostel_Room_Occupancy_Inquiry
+  - fee_hafizquran
+  - fee_siblings
+  - fee_orphan 
+  - affirm
+  - HOD_IT
+  - HOD_CS
+  - HOD_SE
+  - fee_installment
+  - fee_installment_process
+
+entities:
+  - program
+  - transfer
+  - fee
+  - info
+  - admission
+  - university
+  - criteria
+  - elig
+  - department
+  - internship
+  - CS
+  - SE
+  - IT
+  - hod
+  - vice
+
+slots:
+  program:
+    type: categorical
+    values:
+      - CS
+      - SE
+      - IT
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: program
+
+  transfer:
+    type: categorical
+    values:
+      - IT to CS
+      - CS to IT
+      - IT to SE
+      - SE to IT
+      - CS to SE
+      - SE to CS
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: transfer
+
+  fee:
+    type: categorical
+    values:
+      - registration fee
+      - semester fee
+      - late fee
+      - hostel fee
+      - admission cancellation fee
+      - bus fee
+      - admission fee
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: fee
+
+responses:
+  utter_HOD_IT:
+    - text: "Current Chairman of IT department: Dr. Hikmat Ullah Khan, [View Profile](https://su.edu.pk/facultyprofile/10299)"
+
+  utter_HOD_CS:
+    - text: "Current Chairman of CS department:Dr. Hafiz Muhammad Faisal Shehzad, [View Profile](https://su.edu.pk/facultyprofile/91)"
+
+  utter_HOD_SE:
+    - text: "Current Chairman of SE department:Dr. Summair Raza, [View Profile](https://su.edu.pk/facultyprofile/10300)"
+
+  utter_pdf:
+    - text: "[Random example pdf](https://drive.google.com/file/d/1rpQ0Tbpc27slBoi7_UdEYEqr-JbMNTtS/view?usp=drive_link)."
+
+  utter_greet:
+    - text: "Welcome Dear! How can I assist you with admissions or academic programs?"
+
+  utter_greet1:
+    - text: "I am ready to assist you. How can I help you with University of Sargodha admissions or programs?"
+    - text: "I'm doing well, thank you! How can I assist you today?"
+  
+  utter_interested:
+    - text: "That's Great! Please specify what information you need about admissions or programs."
+
+  utter_goodbye:
+    - text: "Thank you for contacting us. Feel free to reach out again if you have more questions."
+
+  utter_iamabot:
+    - text: "I'm a virtual assistant providing information about University of Sargodha admissions and programs made by Zainab Mushtaq, Khushbakhat Saeed and Aneesa Ibrar"
+
+  utter_my_pleasure:
+    - text: "You're welcome! Feel free to ask any other questions."
+
+  utter_programup:
+    - text: "UOS offer BS Computer Science, BS IT, BS Software Engineering, MS IT, MS CS, and MS SE. See all programs: [Academic Programs](https://we.edu.pk/academics/programs)."
+
+  utter_apply_online:
+    - text: "You can Apply online: [UOS Admissions Portal](https://admissions.su.edu.pk/). Review regulations first: [Admission Regulations](https://we.edu.pk/admissions/regulations)."
+
+  utter_multiple_application:
+    - text: "You can apply for multiple programs but must pay separate registration fees for each."
+
+  utter_admission_process:
+    - text: "1. Check eligibility 2. Complete online application 3. Pay fee 4. Take entry test if required 5. Check merit lists 6. Submit documents if selected 7. Attend orientation."
+
+  utter_adm_process_detail:
+    - text: "For detailed guidelines, visit: [How to Apply](https://admissions.su.edu.pk/howtoapply)."
+
+  utter_admission_process_duration:
+    - text: "The admission process typically takes 6-10 weeks from application to class commencement."
+
+  utter_academic_calendar:
+    - text: "View academic calendar: [Uos Academic Calendar](https://su.edu.pk/upload/downloads/Academic%20Calendar%202024-25_1724945144.pdf)."
+
+  utter_admission_opening_date:
+    - text: "Undergraduate admissions open July 10, Postgraduate August 5."
+
+  utter_admission_requirements:
+    - text: "Required documents: attested academic transcripts, CNIC copy, photos, contact info. Apply online and pay PKR 550 (regular) or PKR 950 (with test)."
+
+  utter_admission_deadline:
+    - text: "Undergraduate deadline: July 31. Postgraduate deadline: August 20."
+
+  utter_admission_confirmation:
+    - text: "To confirm your admission, you will need to regularly check the notifications and merit lists published on the [Merit Lists](https://admissions.su.edu.pk/merits) section. If your name appears on the merit list, you will be required to bring your original academic documents for verification, Pay the admission and tuition fees within the given timeframe at the designated bank, and then follow the instructions provided by your respective department regarding the commencement of classes and orientation sessions."
+
+  utter_admission_test:
+    - text: "No entry or admission test required for undergraduate programs but postgraduate programs require entry tests"
+
+  utter_admission_fee:
+    - text: "Undergraduate admission fee: PKR 7,000. Postgraduate fees vary department to department."
+
+  utter_registration_fee:
+    - text: "Registration fee: PKR 550. Additional PKR 950 if test required."
+
+  utter_eligibility_criteria:
+    - text: "The detailed eligibility criteria for all academic programs are available here: [Uos Program Eligibilities PDF](https://we.edu.pk/upload/Academic-Programs-Eligibilities-and-Terminal-Degrees.pdf)."
+
+  utter_late_fee_charges:
+    - text: "Late fee: PKR 100/day for first 10 days. After that, removal from rolls possible. Readmission fine: PKR 5,000."
+
+  utter_admission_cancellation_process:
+    - text: "Submit written application to Registrar's Office within 15 days of admission offer."
+
+  utter_admission_cancellation_deadline:
+    - text: "Cancellation deadline: 15 days from admission offer date."
+
+  utter_admission_cancellation_fee:
+    - text: "if cancelled within initial period there's no admission cancellation fee and your fee wil also get refunded."
+
+  utter_admission_cancellation_feerefund:
+    - text: "100% tuition refund in 1st week, 50% in weeks 2-3, no refund after 3rd week."
+
+  utter_fee_payment_methods:
+    - text: "Pay fees at HBL/Alfalah branches, university counters, or online via fee challan."
+
+  utter_inquire_program:
+    - text: "Which program are you interested in?"
+
+  utter_MSIT:
+    - text: "MSIT (Master of Science in Information Technology): 2-year program. Eligibility: 50% Test Marks 16 years of education including 4-years BSCS/ BSIT/ BSSE/ MSc IT or Equivalent. For more details: [IT Dept](https://su.edu.pk/course/ms%20Information%20technology)."
+
+  utter_MSCS:
+    - text: "The Master of Science in Computer Science (MSCS): 2-year program. Eligibility: 50% Test Marks 16 years of schooling including 4-years BSCS/BSIT/BSSE/MSc IT or equivalent + Departmental Test. Details: [CS Dept](https://su.edu.pk/course/ms-computer-science)."
+
+  utter_MSSE:
+    - text: "The Master of Science in Software Engineering (MSSE): 2-year program. Eligibility: Sixteen years of education including 4-years BSCS/ BSIT/ BSSE/ MSc IT or Equivalent (at least 2.50 CGPA out of 4.00) + Departmental Test (at least 50% marks). Details: [SE Dept](https://su.edu.pk/course/MS-Software-Engineering)."
+
+  utter_BSIT:
+    - text: "The Bachelor of Science in Information Technology (BSIT): 4-year program. Eligibility: At least 50% marks in Intermediate (HSSC) examination with Mathematics, certified by IBCC OR At least 50% marks in Intermediate (HSSC) examination with Pre-Medical or DAE equivalent qualification with Mathematics or equivalent qualification, certified by IBCC Deficiency: Students with pre-medical, must have to pass deficiency courses of Mathematics of 06 credit hours in first two semesters. Merit: Basic criteria + 20 marks of Hafiz-e-Quran (if applicable). Details: [IT Dept](https://su.edu.pk/course/bs-information-technology)."
+
+  utter_BSCS:
+    - text: "The Bachelor of Science in Computer Science (BSCS): 4-year program. Eligibility: At least 50% marks in Intermediate (HSSC) examination with Mathematics, certified by IBCC OR At least 50% marks in Intermediate (HSSC) examination with Pre-Medical or equivalent qualification, certified by IBCC Deficiency: Students with pre-medical, must have to pass deficiency courses of Mathematics of 06 credit hours in first two semesters. Merit: Basic criteria + 20 marks of Hafiz-e-Quran (if applicable). Details: [CS Dept](https://su.edu.pk/course/bs-computer-science)."
+
+  utter_BSSE:
+    - text: "The Bachelor of Science in Software Engineering (BSSE): 4-year program. Eligibility: At least 50% marks in Intermediate (HSSC) examination with Mathematics, certified by IBCC OR At least 50% marks in Intermediate (HSSC) examination with Pre-Medical or equivalent qualification, certified by IBCC Deficiency: Students with pre-medical, must have to pass deficiency courses of Mathematics of 06 credit hours in first two semesters. Merit: Basic criteria + 20 marks of Hafiz-e-Quran (if applicable). Details: [SE Dept](https://su.edu.pk/course/bs-software-engineering)."
+
+  utter_CS_courses:
+    - text: "The Computer Science curriculum encompasses a range of foundational and advanced courses, including Programming Languages, Data Structures, Algorithms, Database Systems, Operating Systems, and Computer Networks. For a detailed list and descriptions of all courses offered within the BS Computer Science program, [Course outline](https://su.edu.pk/upload/department/Computer%20Science%20_%20IT...._1609322484.pdf)."
+  
+  utter_CS_eligibility:
+    - text: "At least 50% marks in Intermediate (HSSC) examination with Mathematics, certified by IBCC OR At least 50% marks in Intermediate (HSSC) examination with Pre-Medical or equivalent qualification, certified by IBCC Deficiency: Students with pre-medical, must have to pass deficiency courses of Mathematics of 06 credit hours in first two semesters. Merit: Basic criteria + 20 marks of Hafiz-e-Quran (if applicable)."
+
+  utter_CS_career:
+    - text: "Graduates of the BS Computer Science program have a wide array of promising career opportunities in various sectors. These include roles as Software Engineers, Data Scientists, web Developers, Cybersecurity Analysts, Database Administrators, Network Engineers, and IT Consultants."
+
+  utter_CS_Program_duration:
+    - text: "It is a full-time undergraduate degree program spanning a duration of 4 years, which is divided into eight semesters."
+
+  utter_CS_faculty:
+    - text: "Uos have team of highly qualified and experienced faculty members who are dedicated to providing quality education and fostering research. Faculty comprises experts in various domains of computer science. You can learn more about their profiles and expertise on the [Department of CS](https://su.edu.pk/department/cs)"
+
+  utter_CS_semester_fee:
+    - text: "Fees for 1st semester Regular program PKR 28,000/semester + PKR 7,000 admission. Self-support PKR 55,000/semester + PKR 7,000 admission. and for all other semesters for regular program PKR 28,000/semester and Self-support PKR 55,000/semester."
+  
+  utter_CS_internship_opportunities:
+    - text: "Uos actively facilitates internship opportunities for BS Computer Science students. These internships provide valuable hands-on experience in the IT industry, allowing students to apply their theoretical knowledge in real-world settings and build professional networks. The department often has collaborations with leading IT companies and organizations in the region."
+
+  utter_CS_merit:
+    - text: "BSCS merit: 40% SSC + 60% HSSC marks. Hafiz-e-Quran gets 20 extra marks."
+
+  utter_CS_jobs:
+    - text: "BSCS jobs: Software Developer, web Developer, System Analyst, QA Engineer."
+
+  utter_IT_courses:
+    - text: "The curriculum for the BS Information Technology (BSIT) program is designed to provide a comprehensive understanding of IT fundamentals and their applications. Core courses typically include Programming Fundamentals, Data Structures, Algorithms, Database Systems, Operating Systems, and Computer Networks. For a detailed list and descriptions of all courses offered within the BS Information Technology program, please visit the [Course outline](https://su.edu.pk/upload/department/Computer%20Science%20_%20IT...._1609322484.pdf)."
+
+  utter_IT_eligibility:
+    - text: "At least 50% marks in Intermediate (HSSC) examination with Mathematics, certified by IBCC OR At least 50% marks in Intermediate (HSSC) examination with Pre-Medical or DAE equivalent qualification with Mathematics or equivalent qualification, certified by IBCC Deficiency: Students with pre-medical, must have to pass deficiency courses of Mathematics of 06 credit hours in first two semesters. Merit: Basic criteria + 20 marks of Hafiz-e-Quran (if applicable)"
+
+  utter_IT_career:
+    - text: "Graduates of the BS Information Technology can pursue a variety of rewarding careers in the IT industry. These roles include IT Support Specialist, Network Administrator, System Administrator, web Developer, Database Administrator, IT Analyst, and positions in software development and IT project management. The program equips graduates with the necessary skills to contribute effectively to the growing digital landscape."
+
+  utter_IT_merit:
+    - text: "BSIT merit: 40% SSC + 60% HSSC marks. Hafiz-e-Quran gets 20 extra marks."
+
+  utter_IT_Program_duration:
+    - text: "BSIT is a 4-year undergraduate degree program, organized into eight semesters of study. This duration allows for a comprehensive exploration of the key areas within information technology."
+
+  utter_IT_faculty:
+    - text: "Uos has a dedicated team of experienced faculty members with expertise in diverse areas of Computer Science and Information Technology. They are committed to providing a high-quality learning experience.[IT Department](https://su.edu.pk/department/it)"
+
+  utter_IT_semester_fee:
+    - text: "Fees for 1st semester Regular program PKR 27,000/semester + PKR 7,000 admission. Self-support PKR 53,000/semester + PKR 7,000 admission. and for all other semesters is Regular program PKR 27,000/semester, Self-support PKR 53,000/semester."
+
+  utter_IT_internship_opportunities:
+    - text: "Uos facilitates valuable internship opportunities for BS Information Technology students. These internships provide practical experience in the IT sector, allowing students to apply their knowledge and develop professional skills. The department often establishes linkages with various IT companies and organizations."
+
+  utter_IT_jobs:
+    - text: "Graduates of the BS Information Technology program are well-equipped for a range of job opportunities in the IT industry. These include roles such as Software Developer, web Developer, Network Engineer, Database Administrator, IT Consultant, System Analyst, and positions in IT support and management. The program's focus on both theoretical knowledge and practical skills ensures graduates are competitive in the job market."
+
+  utter_SE_courses:
+    - text: "The curriculum for the BS Software Engineering (BSSE) program is specifically designed to cover the principles and practices of software development and engineering. Core courses typically include Programming Fundamentals, Data Structures, Algorithms, Computer Organization and Architecture, Software Engineering Principles, Object-Oriented Programming, Software Design and Architecture. For a detailed list and descriptions of all courses offered within the BS Software Engineering program, [Course outline](https://su.edu.pk/upload/department/Computer%20Science%20_%20IT...._1609322484.pdf)."
+
+  utter_SE_eligibility:
+    - text: "At least 50% marks in Intermediate (HSSC) examination with Mathematics, certified by IBCC OR At least 50% marks in Intermediate (HSSC) examination with Pre-Medical or equivalent qualification, certified by IBCC Deficiency: Students with pre-medical, must have to pass deficiency courses of Mathematics of 06 credit hours in first two semesters. Merit: Basic criteria + 20 marks of Hafiz-e-Quran (if applicable)."
+
+  utter_SE_career:
+    - text: "Graduates of the BS Software Engineering program have excellent career prospects in the software development industry and related fields. Potential roles include Software Developer, Software Architect, Quality Assurance Engineer, Software Test Engineer, Technical Lead, and positions in areas such as web development, mobile application development, and database management. The program's focus on engineering principles prepares graduates for the complexities of software development projects."
+
+  utter_SE_Program_duration:
+    - text: "BSSE is a 4-year undergraduate degree program, structured into eight semesters of comprehensive study in the field of software engineering."
+
+  utter_SE_faculty:
+    - text: "The Department of Software Engineering is supported by a dedicated team of faculty members who possess expertise in various domains. They are committed to providing a strong educational foundation and guiding students in their academic and professional development. [Department of SE](https://su.edu.pk/department/se)."
+
+  utter_SE_semester_fee:
+    - text: "Fees for 1st semester Regular program PKR 27,000/semester + PKR 7,000 admission. Self-support PKR 53,000/semester + PKR 7,000 admission. and for all other semesters is Regular program PKR 27,000/semester, Self-support PKR 53,000/semester."
+
+  utter_SE_internship_opportunities:
+    - text: "Uos actively facilitates internship opportunities for BS Software Engineering students. These internships provide crucial practical experience in software development companies and IT organizations, allowing students to apply software engineering principles in real-world projects and gain valuable industry insights."
+
+  utter_SE_jobs:
+    - text: "Graduates SE are highly sought after for various roles in the software industry. Potential job titles include Software Engineer, Software Developer, Software Architect, Quality Assurance Engineer, Test Engineer, Project Manager, and positions in specialized areas such as mobile development and web application development. The program's emphasis on software development methodologies and engineering practices ensures graduates are well-prepared for the demands of the profession."
+
+  utter_SE_merit:
+    - text: "BSSE merit: 40% SSC + 60% HSSC marks. Hafiz-e-Quran gets 20 extra marks."
+
+  utter_inquire_transfer:
+    - text: "Could you please specify the type of transfer you are interested in?"
+
+  utter_transfer_Department:
+    - text: "Submit transfer application to both departments. Approval depends on seat availability and academic criteria. [Download Transfer Application](https://www.su.edu.pk/upload/downloads/ApplicationformTransfer1.pdf)"
+
+  utter_transfer_Department_fee:
+    - text: "No transfer fee, but fee structure may change based on new program."
+
+  utter_meritlist_criteria:
+    - text: "Merit based on academic performance (SSC+HSSC) + test/interview scores (if any)."
+
+  utter_meritlist_date:
+    - text: "Undergraduate merit lists: 1st - August 15, 2nd - August 20, 3rd - August 25. Postgraduate: 1st - September 5, 2nd - September 10. [Merit Lists](https://admissions.su.edu.pk/merits)"
+
+  utter_meritlist_check:
+    - text: "Check merit lists [Merit Lists](https://admissions.su.edu.pk/merits)."
+
+  utter_meritlist_waitinglist:
+    - text: "Waiting lists published after final merit lists if seats become available."
+
+  utter_classes_duration:
+    - text: "Class duration: 1 hour 30 minutes. Lab class are of 2 hours."
+
+  utter_classes_timetable:
+    - text: "Timetables available at department notice boards and sent on whatsapp group every week."
+
+  utter_classes_break:
+    - text: "Short breaks between classes depending on your classes schedule"
+
+  utter_classes_size:
+    - text: "50 students per class or section."
+
+  utter_transport:
+    - text: "Yes, Transport Facility is available. Contact Transport Office for routes and timings. The routes and timings are also shared via Whatsapp."
+
+  utter_transport_busfee:
+    - text: "Transport fee: PKR 2,500/semester (city) which is added in semester fee challan, PKR 15,000/semester (Tehsil routes). [tehsil bus fee form](https://transport.su.edu.pk/)"
+
+  utter_hostel_application_deadline:
+    - text: "Hostel application deadlines announced at semester start."
+
+  utter_hostel_fee:
+    - text: "Hostel fees: Summer PKR 17,300, Fall/Spring PKR 25,550, regular semesters PKR 14,050."
+
+  utter_hostel_rules:
+    - text: "Hostel rules: Curfew 10 PM, no prohibited items, visitor restrictions."
+
+  utter_hostel_facilities:
+    - text: "Hostel facilities: Furnished rooms, mess, laundry, common areas."
+
+  utter_hostel_foodquality:
+    - text: "Mess committee oversees food quality. Monthly menus displayed."
+
+  utter_dress_code:
+    - text: "Dress code: White shirt with blue strip + grey trousers (boys), white kameez shalwar with white dupatta (girls)."
+
+  utter_campus_location:
+    - text: "Main campus: University of Sargodha, Sargodha City, Punjab, Pakistan 40100.You can find the exact location on Google Maps here: [View on Google Maps](https://maps.app.goo.gl/3gqhGAHT16Pagh829)"
+
+  utter_campus_safety:
+    - text: "Campus safety: 24/7 security, CCTV, emergency response teams."
+
+  utter_campus_hours:
+    - text: "Campus hours: 8 AM to 6 PM (may vary by department)."
+
+  utter_uos_history:
+    - text: "Established 2002 (evolved from De'Montmorency College 1929). Ranked 301-350 in World University Young Ranking."
+
+  utter_uos_vision:
+    - text: "Vision: Be a leading institution through quality education and research."
+
+  utter_uos_mission:
+    - text: "Mission: Provide quality learning, enhance global visibility, contribute to knowledge economy."
+
+  utter_uos_values:
+    - text: "Values: Ethics, transparency, social responsibility, inclusivity."
+
+  utter_contact_information:
+    - text: "For General Admission inquiries email on admissions@we.edu.pk Ph#+92(0)48-9230587 or  Visit University Facilitation Centre."
+
+  utter_uos_vicechancellor:
+    - text: "Current Vice Chancellor: Prof. Dr. Qaisar Abbas. He has assumed the charge of office of the Vice Chancellor, University of Sargodha w.e.f. 10.09.2022."
+
+  utter_inquire_scholarship:
+    - text: "The University of Sargodha offers a range of scholarships and financial aid opportunities to support deserving students. To provide you with the most relevant information, could you please specify which scholarship you are interested in learning more about?"
+
+  utter_kinship_scholarships:
+    - text: "Kinship Scholarship offers 50% tuition fee exemption for siblings studying together at we."
+
+  utter_kinship_scholarships_eligibility:
+    - text: "Eligibility: Two or more siblings currently enrolled in BS/MA/MSc/MPhil/PhD programs at we."
+
+  utter_kinship_scholarships_howtoapply:
+    - text: "Apply: Submit Kinship Fee Refund Form each semester with sibling proof to financial aid office."
+
+  utter_hafiz_quran_scholarships:
+    - text: "Hafiz-e-Quran Scholarship provides 100% tuition fee exemption."
+
+  utter_hafiz_quran_scholarships_eligibility:
+    - text: "Eligibility: Admitted to BS/MA/MSc programs and pass Hafiz-e-Quran test."
+
+  utter_hafiz_quran_scholarships_howtoapply:
+    - text: "Apply: Declare during admission and pass verification test."
+
+  utter_honhaar_scholarship:
+    - text: "Honhaar Scholarship by Punjab Government. Apply: [PHEC Portal](https://honhaarscholarship.punjabhec.gov.pk/)."
+
+  utter_honhaar_scholarship_eligibility:
+    - text: "Eligibility: Punjab domicile, family income < PKR 300,000/month, >70% marks (Sciences) or >65% (Arts)."
+
+  utter_honhaar_scholarship_howtoapply:
+    - text: "Apply online at [PHEC Portal](https://honhaarscholarship.punjabhec.gov.pk/)."
+
+  utter_hec_need_based_scholarship:
+    - text: "HEC Need-Based Scholarship: PKR 6,000/month stipend + tuition fees."
+
+  utter_hec_need_based_scholarship_eligibility:
+    - text: "Eligibility: Financial need, enrolled in BS/MA/MSc program."
+
+  utter_hec_need_based_scholarship_howtoapply:
+    - text: "Apply through university focal person (not directly to HEC)."
+
+  utter_benazir_scholarship:
+    - text: "Benazir Scholarship for disadvantaged students (50% reserved for females)."
+
+  utter_benazir_scholarship_eligibility:
+    - text: "Eligibility: Financial need, minimum GPA 3.0 in undergraduate program."
+
+  utter_benazir_scholarship_howtoapply:
+    - text: "Apply online via HEC or university website when announced."
+
+  utter_diya_pakistan_scholarship:
+    - text: "Diya Pakistan Scholarship supports underprivileged students."
+
+  utter_diya_pakistan_scholarship_eligibility:
+    - text: "Eligibility: Resident of Pakistan, low family income, enrolled in accredited institution."
+
+  utter_diya_pakistan_scholarship_howtoapply:
+    - text: "Apply: Download form from Diya Pakistan website and submit to nearest office."
+
+  utter_pakistan_bait_ul_mal_scholarship:
+    - text: "Pakistan Bait-ul-Mal Scholarship assists low-income students."
+ 
+  utter_pakistan_bait_ul_mal_scholarship_eligibility:
+    - text: "Eligibility: Low-income family, minimum GPA 2.5."
+
+  utter_pakistan_bait_ul_mal_scholarship_howtoapply:
+    - text: "Apply: Get form from Bait-ul-Mal office/website and submit with required documents."
+
+  utter_scotland_young_women_scholarship:
+    - text: "Scotland Young Women Scholarship empowers female students."
+
+  utter_scotland_young_women_scholarship_eligibility:
+    - text: "Eligibility: Female student (18-25 years), leadership potential, community involvement."
+
+  utter_scotland_young_women_scholarship_howtoapply:
+    - text: "Apply online via official scholarship website."
+
+  utter_peef_scholarship:
+    - text: "PEEF Scholarship for talented, needy Punjab students."
+
+  utter_peef_scholarship_eligibility:
+    - text: "Eligibility: Punjab domicile, low family income, strong academic record."
+
+  utter_peef_scholarship_howtoapply:
+    - text: "Apply: Download form from PEEF website and submit through institution."
+
+  utter_hec_employees_fee_exemption:
+    - text: "HEC Employees Fee Exemption for children of HEC staff."
+
+  utter_hec_employees_fee_exemption_eligibility:
+    - text: "Eligibility: Child of current/former HEC employee, enrolled in accredited institution."
+
+  utter_hec_employees_fee_exemption_howtoapply:
+    - text: "Apply through HEC office with parent's employment proof."
+    
+  utter_sos_children_village_scholarship:
+    - text: "SOS Children's Village Scholarship for former residents."
+
+  utter_sos_children_village_scholarship_eligibility:
+    - text: "Eligibility: Former SOS Children's Village resident, enrolled in higher education."
+
+  utter_sos_children_village_scholarship_howtoapply:
+    - text: "Contact SOS Village coordinator for application process."
+
+  utter_martyrs_family_scholarship:
+    - text: "Martyrs' Family Scholarship for families of martyrs."
+
+  utter_martyrs_family_scholarship_eligibility:
+    - text: "Eligibility: Direct family member of recognized martyr, enrolled in institution."
+
+  utter_martyrs_family_scholarship_howtoapply:
+    - text: "Apply to relevant government office supporting martyrs' families."
+ 
+  utter_differently_abled_scholarship:
+    - text: "Differently-Abled Scholarship for students with disabilities."
+
+  utter_differently_abled_scholarship_eligibility:
+    - text: "Eligibility: Certified disability, enrolled in institution."
+
+  utter_differently_abled_scholarship_howtoapply:
+    - text: "Apply through scholarship portal with disability certificate."
+
+  utter_deserving_orphan_scholarship:
+    - text: "Deserving Orphan Scholarship supports orphaned students."
+
+  utter_deserving_orphan_scholarship_eligibility:
+    - text: "Eligibility: Orphan, enrolled in institution."
+
+  utter_deserving_orphan_scholarship_howtoapply:
+    - text: "Download form from provider's website, submit with orphan proof."
+
+  utter_university_employees_scholarship:
+    - text: "we Employees Scholarship for staff children."
+
+  utter_university_employees_scholarship_eligibility:
+    - text: "Eligibility: Child of current we employee, enrolled in institution."
+
+  utter_university_employees_scholarship_howtoapply:
+    - text: "Apply to we scholarship office with parent's employment proof."
+
+  utter_sports_based_scholarship:
+    - text: "Sports Scholarship for athlete students."
+
+  utter_sports_based_scholarship_eligibility:
+    - text: "Eligibility: Represented institution/country in sport, maintain minimum GPA."
+
+  utter_sports_based_scholarship_howtoapply:
+    - text: "Submit sports achievements proof to university sports department."
+
+  utter_position_holders_scholarship:
+    - text: "Position Holders Scholarship for top exam performers."
+
+  utter_position_holders_scholarship_eligibility:
+    - text: "Eligibility: Top position in board/university exams."
+
+  utter_position_holders_scholarship_howtoapply:
+    - text: "Submit exam records and position certificate."
+
+  utter_idps_scholarship:
+    - text: "IDPs Scholarship for internally displaced students."
+
+  utter_idps_scholarship_eligibility:
+    - text: "Eligibility: Internally displaced student, enrolled in institution."
+
+  utter_idps_scholarship_howtoapply:
+    - text: "Apply to relevant government/humanitarian office with IDP proof."
+ 
+  utter_children_spouse_shaheed_scholarship:
+    - text: "Children & Spouse of Shaheed Scholarship."
+
+  utter_children_spouse_shaheed_scholarship_eligibility:
+    - text: "Eligibility: Child/spouse of recognized martyr, enrolled in institution."
+
+  utter_children_spouse_shaheed_scholarship_howtoapply:
+    - text: "Apply to relevant government office supporting martyrs' families."
+
+  utter_505_village_students_scholarship:
+    - text: "505 Village Students Scholarship for rural area residents."
+
+  utter_505_village_students_scholarship_eligibility:
+    - text: "Eligibility: Resident of designated '505 Village', enrolled in institution."
+
+  utter_505_village_students_scholarship_howtoapply:
+    - text: "Download form from provider's website, submit with residency proof."
+
+  utter_hec_employees_scholarship:
+    - text: "HEC Employees Scholarship for staff children."
+
+  utter_hec_employees_scholarship_eligibility:
+    - text: "Eligibility: Child of current HEC employee, enrolled in institution."
+
+  utter_hec_employees_scholarship_howtoapply:
+    - text: "Apply to HEC office with parent's employment proof."
+
+  utter_scottish_scholarship:
+    - text: "Scottish Scholarship for Scotland residents."
+
+  utter_scottish_scholarship_eligibility:
+    - text: "Eligibility: Permanent Scotland resident, enrolled in institution."
+
+  utter_scottish_scholarship_howtoapply:
+    - text: "Apply online via official scholarship website."
+  
+  utter_ilc_need_based_scholarship:
+    - text: "ILC Need-Based Scholarship for financially needy students."
+
+  utter_ilc_need_based_scholarship_eligibility:
+    - text: "Eligibility: Demonstrated financial need, enrolled in institution."
+
+  utter_ilc_need_based_scholarship_howtoapply:
+    - text: "Submit application with financial need proof to scholarship office."
+
+  utter_minority_scholarship:
+    - text: "Minority Scholarship for recognized minority communities."
+
+  utter_minority_scholarship_eligibility:
+    - text: "Eligibility: Member of recognized minority community, enrolled in institution."
+
+  utter_minority_scholarship_howtoapply:
+    - text: "Download form from provider's website, submit with minority proof."
+
+  utter_beef_scholarship:
+    - text: "BEEF Scholarship for agriculture students."
+
+  utter_beef_scholarship_eligibility:
+    - text: "Eligibility: Enrolled in agriculture program, financial need."
+
+  utter_beef_scholarship_howtoapply:
+    - text: "Submit application with enrollment and financial need proof."
+
+  utter_sacra_scholarship:
+    - text: "SACRA Scholarship for arts/culture students."
+
+  utter_sacra_scholarship_eligibility:
+    - text: "Eligibility: Enrolled in arts/culture program, financial need."
+
+  utter_sacra_scholarship_howtoapply:
+    - text: "Submit application with enrollment and financial need proof."
+
+  utter_IT_Department_Location:
+    - text: The department of IT is located on the 2nd floor of "Muhammad Ali block" with department of economics on its right and department of chemistry on it left.
+      
+  utter_SE_Department_Location:
+    - text: The department of SE is located in "acadamic block" near multi purpose hall with  department of pharmacy as its neighbouring department.
+      
+  utter_CS_Department_Location:
+    - text: The department of CS is located on the ground floor of "Muhammad Ali block" with department of economics on its right and department of chemistry on it left.
+      
+  utter_Admission_Eligibility_Intermediate_Marks:
+    - text: 50% marks in intermediate are required to be eligible to apply for admission in any program at we.However Admission confirmation depends on merit.
+      
+  utter_Required_Application_Documents:
+    - text: The documents required for admission include attested copies of all your academic transcripts and certificates, a copy of your Computerized National Identity Card (CNIC) or equivalent identification, recent passport-sized photographs, and your active contact information, including mobile phone number and email address.
+      
+  utter_Application_Form_Download_Location:
+    - text: To download the application form you have to go to (https://admissions.su.edu.pk/).and register yourself.Then you will be able to access and download application fom\rm.
+      
+  utter_Application_Fee_Inquiry:
+    - text: You have to pay non-refundable processing fee which is PKR 550 for regular programs and PKR 950 where an entry test is required.
+      
+  utter_Online_Admission_Fee_Payment_Option:
+    - text: Yes,you can pay application fee/semester fee online via HBL app.
+      
+  utter_Online_Fee_Payment_Instructions:
+    - text: You can download challan form from (https://admissions.su.edu.pk/).And you can use HBL app to Transfer fee amount to the university's bank account by using the account number mentioned on your fee challan.
+      
+  utter_Eligibility_Check_Specific_Program_FSC_Marks:
+    - text: Yes, you are eligible to apply for admission in BSIT or any other program in uos.However admission confirmation depends on merit.
+      
+  utter_Eligibility_Check_Intermediate_Marks:
+    - text: No, you are not eligible to apply for admission in uos.The minimum percentage of marks required to be eligible to apply for admission is 50%.
+      
+  utter_Scholarship_Admission_Inquiry:
+    - text: Yes, there are various types of scholarships for students including kinship scolarship,merit based and need based scholarship.
+      
+  utter_Fee_Concession_Inquiry:
+    - text: "Yes, fee concessions are available to students who meet specific eligibility criteria. These generally include Hafiz-e-Quran, students with disabilities, those whose guardian is an employee of the University of Sargodha, or those with a sibling currently enrolled at uos etc."
+
+  utter_Fee_Concession_Application_Process:
+    - text: "To apply for a fee concession at the University of Sargodha, students generally need to follow these steps: 
+      1. Obtain and Fill Out the Application Form
+      2.Gather Supporting Documents including CNIC / Form-B of both students,Copies of fee paid challan forms of both students,Affidavit.Any other documents related to your financial situation or eligibility for concession.
+      3.Submit the Application
+      4.Attend the Interview
+      5.Wait for the Decision"
+      
+  utter_Hostel_Availability_Inquiry:
+    - text: Yes, the University of Sargodha offers hostel accommodation facilities for both male and female students on its main campus.
+      
+  utter_girls_hostel:
+    - text: There are several hostel accomodation options for female students including fatima hall,ayesha hall,haleema hall,khadija hall.
+      
+  utter_boys_hostel:
+    - text: There are several accomodation options for male students including Iqbal hall and Quaid-e Azam hall.For specific inquiries regarding the boys' hostels at the University of Sargodha, you can contact Rana Izhar, who is the Assistant Registrar and often the point of contact for boys' hostels. You can reach him at 📞 048-9230898 or via email at ✉️ izhar.sattar@we.edu.pk. He should be able to provide you with the most current and detailed information."
+      
+  utter_Girls_Hostel_Location:
+    - text: All of the girls hostels are situated inside the campus.For all inquiries related to the girls' hostels at the University of Sargodha,the primary contact person is Noshaba Azhar, who serves as the Warden/Secretary of the Hall Council. You can contact her at 📞 048-9230898 or via email at ✉️ noshibaizhar786@gmail.com. She will be able to assist you with the necessary information."
+      
+  utter_boys_Hostel_Location_Inquiry:
+    - text: All of the boys hostels are situated inside the campus.For specific inquiries regarding the boys' hostels at the University of Sargodha, you can contact Rana Izhar, who is the Assistant Registrar and often the point of contact for boys' hostels. You can reach him at 📞 048-9230898 or via email at ✉️ izhar.sattar@we.edu.pk. He should be able to provide you with the most current and detailed information."
+      
+  utter_Hostel_Application_Process:
+    - text: To apply for hostel, you need to visit hostel admin office and fill the application form and the admin office staff will futher guide you about the documents required to apply for hostel along with application form, [Hostel Form](https://hostels.su.edu.pk/Hostel_Form).
+      
+  utter_Hostel_Fee_Online_Payment_Option:
+    - text: No,you can't pay hostel fee online.You have to submit it in hostel admin office.
+    
+  utter_Hostel_Facilities_Mess_Availability:
+    - text: Yes, Hostels at University of Sargodha has the facility of mess,which offers you  2 meals including lunch and dinner,while you have to manage breakfast by yourself.Kitchens are also available for students where they can prepare their own food.each kitchen can be shared by 4 persons at a time.
+      
+  utter_Hostel_Facilities_Kitchen_Availability:
+    - text: Yes,Kitchens are available for students where they can prepare their own food.Each kitchen can be shared by 4 persons at a time.
+      
+  utter_Hostel_Admin_Office_Location:
+    - text: Hostel admin office for each hostel is located within that particular hostel.As an example, admin office of Fatima Hall is located inside Fatima Hall building on the right side right after entering the building.
+      
+  utter_Hostel_Room_Occupancy_Inquiry:
+    - text: The numnber of students in a hostel  room depends on the particular hostel that is assigned to you. In some hostels ,one hostel  room is shared by 3 persons,while in others it may be shared by 4 to 6 persons.
+  
+  utter_fee_hafizquran:
+    - text: " The University of Sargodha offers a 100% tuition fee concession to Hafiz-e-Quran students. To be eligible, students must Secure a minimum of 2.5 GPA in the semester and Qualify a Hifz test conducted by the university."
+
+  utter_fee_orphan:  
+    - text: "The University of Sargodha provides a 100% tuition fee concession to orphan and deserving students. This concession is granted on a case-by-case basis as decided by the Vice Chancellor. Additionally, concessions for orphan/deserving students are based on performance (minimum 2.5 GPA in semester / 60% marks in annual system) and the level of deservedness assessed through the Fee Concession Committee."
+
+  utter_fee_siblings:
+    - text: "The University of Sargodha offers a 50% tuition fee exemption to the younger brother/sister on a kinship basis. This can be availed by the recommendation of both concerned Heads of Department, or by providing a paid fee challan of the elder brother/sister. It is generally applicable to one younger sibling."
+  
+  utter_affirm:
+    - text: "Yes. Any Other questions please?"
+
+  utter_fee_installment:
+    - text: "You can pay your fees in two installments: 60% for the first installment and 40% for the second. The second installment is due within two months after the first installment's deadline. For instance, if your total fee is 41,000 PKR, the first installment would be 24,600 PKR, and the second would be 16,400 PKR. Please adhere to the deadlines to avoid penalties."
+  
+  utter_fee_installment_process:
+    - text: "To qualify for fee installment plans, students must have a CGPA of 2.5 or above. Only three students per section are eligible, prioritized by CGPA. To apply, submit a formal application to the administration office. If eligible, the administration will arrange your fee installments. Please submit your application promptly."
+
+  utter_fee_installment_time:
+    - text: "Fee installmens are made with 2 or 3 days after application submission."
+
+  utter_sec_installment:
+    - text: "The second installment is due within two months after the first installment's deadline."
+  
+  utter_bus_timing:
+    - text: "Bus timing is different for different routes Morning timing: 7:30am and 8:00am while Bus Departure from University (off timing) at 11:00am, 12:30pm, 2:30pm, 4:10pm and 5:30pm.  buses schedule is shared via whatsapp or you can ask from transport facility. I dont have access to the bus route or schedule but working on it will soon add this."
+
+  utter_bus_stop_location:
+    - text: "Bus Stop location [view google map](https://maps.app.goo.gl/PPw4gMwxndCcz81t8)"
+
+  utter_bus_routes:
+    - text: "Buses Routes are shared via whatsapp. I dont have access to the bus route schedule but working on it will soon add this."
+
+
+actions:
+  - utter_bus_timing
+  - utter_bus_stop_location
+  - utter_bus_routes
+  - utter_fee_installment
+  - utter_fee_installment_process
+  - utter_fee_installment_time
+  - utter_sec_installment
+  - utter_affirm    
+  - utter_pdf
+  - utter_greet
+  - utter_greet1
+  - utter_goodbye
+  - utter_iamabot
+  - utter_my_pleasure
+  - utter_apply_online
+  - utter_multiple_application
+  - utter_admission_process
+  - utter_admission_process_duration
+  - utter_academic_calendar
+  - utter_admission_opening_date
+  - utter_admission_requirements
+  - utter_admission_deadline
+  - utter_admission_confirmation
+  - utter_admission_test
+  - utter_admission_fee
+  - utter_registration_fee
+  - utter_eligibility_criteria
+  - utter_late_fee_charges
+  - utter_admission_cancellation_process
+  - utter_admission_cancellation_deadline
+  - utter_admission_cancellation_fee
+  - utter_admission_cancellation_feerefund
+  - utter_fee_payment_methods
+  - utter_inquire_program
+  - utter_MSIT
+  - utter_MSCS
+  - utter_MSSE
+  - utter_BSIT
+  - utter_BSCS
+  - utter_BSSE
+  - utter_CS_courses
+  - utter_CS_eligibility
+  - utter_CS_career
+  - utter_CS_Program_duration
+  - utter_CS_faculty
+  - utter_CS_semester_fee
+  - utter_CS_internship_opportunities
+  - utter_CS_jobs
+  - utter_IT_courses
+  - utter_IT_eligibility
+  - utter_IT_career
+  - utter_IT_Program_duration
+  - utter_IT_faculty
+  - utter_IT_semester_fee
+  - utter_IT_internship_opportunities
+  - utter_IT_jobs
+  - utter_SE_courses
+  - utter_SE_eligibility
+  - utter_SE_career
+  - utter_SE_Program_duration
+  - utter_SE_faculty
+  - utter_SE_semester_fee
+  - utter_SE_internship_opportunities
+  - utter_SE_jobs
+  - utter_boys_hostel
+  - utter_girls_hostel
+  - utter_SE_merit
+  - utter_CS_merit
+  - utter_IT_merit
+  - utter_inquire_transfer
+  - utter_transfer_Department
+  - utter_transfer_Department_fee
+  - utter_meritlist_criteria
+  - utter_meritlist_date
+  - utter_meritlist_check
+  - utter_meritlist_waitinglist
+  - utter_classes_duration
+  - utter_classes_timetable
+  - utter_classes_break
+  - utter_classes_size
+  - utter_transport
+  - utter_transport_busfee
+  - utter_hostel_application_deadline
+  - utter_hostel_fee
+  - utter_hostel_rules
+  - utter_hostel_facilities
+  - utter_hostel_foodquality
+  - utter_dress_code
+  - utter_campus_location
+  - utter_campus_safety
+  - utter_campus_hours
+  - utter_uos_history
+  - utter_uos_vision
+  - utter_uos_mission
+  - utter_uos_values
+  - utter_uos_vicechancellor
+  - utter_contact_information
+  - utter_inquire_scholarship
+  - utter_kinship_scholarships
+  - utter_kinship_scholarships_eligibility
+  - utter_kinship_scholarships_howtoapply
+  - utter_hafiz_quran_scholarships
+  - utter_hafiz_quran_scholarships_eligibility
+  - utter_hafiz_quran_scholarships_howtoapply
+  - utter_honhaar_scholarship
+  - utter_honhaar_scholarship_eligibility
+  - utter_honhaar_scholarship_howtoapply
+  - utter_hec_need_based_scholarship
+  - utter_hec_need_based_scholarship_eligibility
+  - utter_hec_need_based_scholarship_howtoapply
+  - utter_benazir_scholarship
+  - utter_benazir_scholarship_eligibility
+  - utter_benazir_scholarship_howtoapply
+  - utter_diya_pakistan_scholarship
+  - utter_diya_pakistan_scholarship_eligibility
+  - utter_diya_pakistan_scholarship_howtoapply
+  - utter_pakistan_bait_ul_mal_scholarship
+  - utter_pakistan_bait_ul_mal_scholarship_eligibility
+  - utter_pakistan_bait_ul_mal_scholarship_howtoapply
+  - utter_scotland_young_women_scholarship
+  - utter_scotland_young_women_scholarship_eligibility
+  - utter_scotland_young_women_scholarship_howtoapply
+  - utter_peef_scholarship
+  - utter_peef_scholarship_eligibility
+  - utter_peef_scholarship_howtoapply
+  - utter_hec_employees_fee_exemption
+  - utter_hec_employees_fee_exemption_eligibility
+  - utter_hec_employees_fee_exemption_howtoapply
+  - utter_sos_children_village_scholarship
+  - utter_sos_children_village_scholarship_eligibility
+  - utter_sos_children_village_scholarship_howtoapply
+  - utter_martyrs_family_scholarship
+  - utter_martyrs_family_scholarship_eligibility
+  - utter_martyrs_family_scholarship_howtoapply
+  - utter_differently_abled_scholarship
+  - utter_differently_abled_scholarship_eligibility
+  - utter_differently_abled_scholarship_howtoapply
+  - utter_deserving_orphan_scholarship
+  - utter_deserving_orphan_scholarship_eligibility
+  - utter_deserving_orphan_scholarship_howtoapply
+  - utter_university_employees_scholarship
+  - utter_university_employees_scholarship_eligibility
+  - utter_university_employees_scholarship_howtoapply
+  - utter_sports_based_scholarship
+  - utter_sports_based_scholarship_eligibility
+  - utter_sports_based_scholarship_howtoapply
+  - utter_position_holders_scholarship
+  - utter_position_holders_scholarship_eligibility
+  - utter_position_holders_scholarship_howtoapply
+  - utter_idps_scholarship
+  - utter_idps_scholarship_eligibility
+  - utter_idps_scholarship_howtoapply
+  - utter_children_spouse_shaheed_scholarship
+  - utter_children_spouse_shaheed_scholarship_eligibility
+  - utter_children_spouse_shaheed_scholarship_howtoapply
+  - utter_505_village_students_scholarship
+  - utter_505_village_students_scholarship_eligibility
+  - utter_505_village_students_scholarship_howtoapply
+  - utter_hec_employees_scholarship
+  - utter_hec_employees_scholarship_eligibility
+  - utter_hec_employees_scholarship_howtoapply
+  - utter_scottish_scholarship
+  - utter_scottish_scholarship_eligibility
+  - utter_scottish_scholarship_howtoapply
+  - utter_ilc_need_based_scholarship
+  - utter_ilc_need_based_scholarship_eligibility
+  - utter_ilc_need_based_scholarship_howtoapply
+  - utter_minority_scholarship
+  - utter_minority_scholarship_eligibility
+  - utter_minority_scholarship_howtoapply
+  - utter_beef_scholarship
+  - utter_beef_scholarship_eligibility
+  - utter_beef_scholarship_howtoapply
+  - utter_sacra_scholarship
+  - utter_sacra_scholarship_eligibility
+  - utter_sacra_scholarship_howtoapply
+  - action_store_conversation
+  - action_log_response_quality
+  - action_show_metrics
+  - utter_programup
+  - utter_IT_Department_Location
+  - utter_SE_Department_Location
+  - utter_CS_Department_Location
+  - utter_Admission_Eligibility_Intermediate_Marks
+  - utter_Required_Application_Documents
+  - utter_Application_Form_Download_Location
+  - utter_Application_Fee_Inquiry  
+  - utter_Online_Admission_Fee_Payment_Option
+  - utter_Online_Fee_Payment_Instructions
+  - utter_Eligibility_Check_Specific_Program_FSC_Marks
+  - utter_Eligibility_Check_Intermediate_Marks
+  - utter_Scholarship_Admission_Inquiry
+  - utter_Fee_Concession_Inquiry
+  - utter_Fee_Concession_Application_Process
+  - utter_Hostel_Availability_Inquiry
+  - utter_Girls_Hostel_Location
+  - utter_boys_Hostel_Location_Inquiry
+  - utter_Hostel_Application_Process
+  - utter_Hostel_Fee_Online_Payment_Option
+  - utter_Hostel_Facilities_Mess_Availability
+  - utter_Hostel_Facilities_Kitchen_Availability
+  - utter_Hostel_Admin_Office_Location
+  - utter_Hostel_Room_Occupancy_Inquiry
+  - utter_fee_hafizquran
+  - utter_fee_siblings
+  - utter_fee_orphan 
+  - utter_HOD_IT
+  - utter_HOD_CS
+  - utter_HOD_SE
+  - action_gemini_fallback
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

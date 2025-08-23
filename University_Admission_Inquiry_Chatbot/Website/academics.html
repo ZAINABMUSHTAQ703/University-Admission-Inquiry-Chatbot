@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics | University of Sargodha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-logo {
+                height: 30px;
+            }
+        }
+
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        /* Color Variables - Sargodha University Colors */
+        :root {
+            --primary-blue: #003366;
+            --dark-blue: #001a33;
+            --light-blue: #0066cc;
+            --black: #121212;
+            --dark-gray: #333333;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --orange: #ff6600;
+            --light-orange: #ff9933;
+        }
+
+
+        /* Global Styles */
+        body {
+            color: var(--black);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--light-blue);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--orange);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--orange);
+            color: var(--white);
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background-color: var(--light-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .section-title {
+            position: relative;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-blue);
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--orange);
+            border-radius: 2px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .logo span {
+            color: var(--orange);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-gray);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--orange);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 120px 0 40px;
+            background-color: var(--light-gray);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .breadcrumb-item {
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            content: '/';
+            margin-left: 10px;
+            color: var(--dark-gray);
+        }
+
+        /* Academics Hero */
+        .academics-hero {
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .academics-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .programs-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            background-color: var(--light-gray);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+
+        .tab-btn.active {
+            background-color: var(--orange);
+            color: var(--white);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .program-card {
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .program-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .program-card:hover .program-img img {
+            transform: scale(1.1);
+        }
+
+        .program-info {
+            padding: 25px;
+        }
+
+        .program-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        .program-info p {
+            margin-bottom: 15px;
+        }
+
+        .program-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .program-duration,
+        .program-credits {
+            display: flex;
+            align-items: center;
+            color: var(--orange);
+            font-weight: 500;
+        }
+
+        .program-duration i,
+        .program-credits i {
+            margin-right: 5px;
+        }
+
+        /* Course Catalog */
+        .course-catalog {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .catalog-container {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .catalog-search {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .catalog-search input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+        }
+
+        .catalog-search button {
+            padding: 0 20px;
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .catalog-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .catalog-table th,
+        .catalog-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .catalog-table th {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .catalog-table tr:hover {
+            background-color: rgba(0, 86, 179, 0.05);
+        }
+
+        .course-code {
+            color: var(--orange);
+            font-weight: 500;
+        }
+
+        /* Faculty Directory */
+        .faculty {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .faculty-card {
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .faculty-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .faculty-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .faculty-card:hover .faculty-img img {
+            transform: scale(1.1);
+        }
+
+        .faculty-info {
+            padding: 20px;
+        }
+
+        .faculty-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+
+        .faculty-info p {
+            color: var(--orange);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .faculty-department {
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+        }
+
+        /* Academic Calendar */
+        .calendar {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .calendar-container {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .calendar-title {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+        }
+
+        .calendar-download {
+            display: flex;
+            align-items: center;
+            color: var(--orange);
+            font-weight: 500;
+        }
+
+        .calendar-download i {
+            margin-right: 5px;
+        }
+
+        .calendar-events {
+            list-style: none;
+        }
+
+        .calendar-event {
+            padding: 20px;
+            border-left: 4px solid var(--orange);
+            margin-bottom: 20px;
+            background-color: rgba(0, 86, 179, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .calendar-event:hover {
+            background-color: rgba(0, 86, 179, 0.1);
+            transform: translateX(5px);
+        }
+
+        .event-date {
+            font-weight: 600;
+            color: var(--orange);
+            margin-bottom: 5px;
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--orange);
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--orange);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--orange);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* Typewriter Effect */
+        .typewriter {
+            display: inline-block;
+            position: relative;
+        }
+
+        .typewriter::after {
+            content: '|';
+            position: absolute;
+            right: -10px;
+            animation: blink 0.7s infinite;
+            color: var(--orange);
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Chatbot Button */
+        .chatbot-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--orange);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-btn:hover {
+            background-color: var(--light-orange);
+            transform: scale(1.1);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .academics-hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 40px;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .academics-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .catalog-search {
+                flex-direction: column;
+            }
+
+            .catalog-search input {
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+
+            .catalog-search button {
+                border-radius: 4px;
+                padding: 12px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_grGHJL36GZKtCxqf2r2Nc2MQ05EkuRC-ir55jwuTmavUMnt2SCfnSmXdc9HDr6lRkoM&usqp=CAU" alt="University of Sargodha Logo" class="nav-logo" style="height: 70px; width: 70px;">
+                    <a href="#" class="logo">Sargodha<span>University</span></a>
+                </div>
+                 <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html" class="active">Programs</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="chatbot.html">Chatbot</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb 
+    <section class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Academics</li>
+            </ul>
+        </div>
+    </section>-->
+
+    <!-- Academics Hero -->
+    <section class="academics-hero">
+        <div class="container">
+            <h1>
+                <span class="typewriter" id="typewriter"></span>
+            </h1>
+            <p>Explore our diverse academic programs and resources designed to empower your educational journey</p>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs section-padding">
+        <div class="container">
+            <h2 class="section-title">Programs Offered</h2>
+            
+            <div class="programs-tabs">
+                <button class="tab-btn active" data-tab="undergraduate">Undergraduate</button>
+                <button class="tab-btn" data-tab="graduate">Graduate</button>
+                <button class="tab-btn" data-tab="doctoral">Doctoral</button>
+                <button class="tab-btn" data-tab="diploma">Diploma</button>
+            </div>
+            
+            <div class="tab-content active" id="undergraduate">
+                <div class="programs-grid">
+                    <div class="program-card floating">
+                        <div class="program-img">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Computer Science">
+                        </div>
+                        <div class="program-info">
+                            <h3>BS Computer Science</h3>
+                            <p>A comprehensive program covering programming, algorithms, and software development.</p>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> 4 Years</span>
+                                <span class="program-credits"><i class="fas fa-graduation-cap"></i> 130 Credits</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card floating delay-1">
+                        <div class="program-img">
+                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Information Technology">
+                        </div>
+                        <div class="program-info">
+                            <h3>BS Information Technology</h3>
+                            <p>Focuses on IT infrastructure, networking, and information systems management.</p>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> 4 Years</span>
+                                <span class="program-credits"><i class="fas fa-graduation-cap"></i> 130 Credits</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card floating delay-2">
+                        <div class="program-img">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Software Engineering">
+                        </div>
+                        <div class="program-info">
+                            <h3>BS Software Engineering</h3>
+                            <p>Engineering principles applied to software development and system design.</p>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> 4 Years</span>
+                                <span class="program-credits"><i class="fas fa-graduation-cap"></i> 136 Credits</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="graduate">
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="program-img">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Data Science">
+                        </div>
+                        <div class="program-info">
+                            <h3>MS Data Science</h3>
+                            <p>Advanced study of data analysis, machine learning, and big data technologies.</p>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> 2 Years</span>
+                                <span class="program-credits"><i class="fas fa-graduation-cap"></i> 30 Credits</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card">
+                        <div class="program-img">
+                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80" alt="Cyber Security">
+                        </div>
+                        <div class="program-info">
+                            <h3>MS Cyber Security</h3>
+                            <p>Specialized program in network security, cryptography, and ethical hacking.</p>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> 2 Years</span>
+                                <span class="program-credits"><i class="fas fa-graduation-cap"></i> 30 Credits</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card">
+                        <div class="program-img">
+                            <img src="https://images.unsplash.com/photo-1581092921461-39b2f2f8a1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Artificial Intelligence">
+                        </div>
+                        <div class="program-info">
+                            <h3>MS Artificial Intelligence</h3>
+                            <p>Advanced study of AI algorithms, neural networks, and machine learning.</p>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> 2 Years</span>
+                                <span class="program-credits"><i class="fas fa-graduation-cap"></i> 30 Credits</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="doctoral">
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="program-img">
+                            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Computer Science PhD">
+                        </div>
+                        <div class="program-info">
+                            <h3>PhD Computer Science</h3>
+                            <p>Doctoral research in advanced computing topics and innovative technologies.</p>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> 3-5 Years</span>
+                                <span class="program-credits"><i class="fas fa-graduation-cap"></i> Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="diploma">
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="program-img">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Web Development">
+                        </div>
+                        <div class="program-info">
+                            <h3>Diploma in Web Development</h3>
+                            <p>Practical training in front-end and back-end web development technologies.</p>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> 1 Year</span>
+                                <span class="program-credits"><i class="fas fa-graduation-cap"></i> 30 Credits</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card">
+                        <div class="program-img">
+                            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mobile App Development">
+                        </div>
+                        <div class="program-info">
+                            <h3>Diploma in Mobile App Development</h3>
+                            <p>Comprehensive training in iOS and Android app development.</p>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> 1 Year</span>
+                                <span class="program-credits"><i class="fas fa-graduation-cap"></i> 30 Credits</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Catalog -->
+    <section class="course-catalog section-padding">
+        <div class="container">
+            <h2 class="section-title">Course Catalog</h2>
+            <div class="catalog-container">
+                <div class="catalog-search">
+                    <input type="text" placeholder="Search courses...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <table class="catalog-table">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Course Title</th>
+                            <th>Credits</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="course-code">CS-101</td>
+                            <td>Introduction to Programming</td>
+                            <td>3</td>
+                            <td>Computer Science</td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">CS-201</td>
+                            <td>Data Structures and Algorithms</td>
+                            <td>3</td>
+                            <td>Computer Science</td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">IT-301</td>
+                            <td>Database Systems</td>
+                            <td>3</td>
+                            <td>Information Technology</td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">SE-401</td>
+                            <td>Software Engineering</td>
+                            <td>3</td>
+                            <td>Software Engineering</td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">CS-501</td>
+                            <td>Artificial Intelligence</td>
+                            <td>3</td>
+                            <td>Computer Science</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="#" class="btn">View Full Catalog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Directory -->
+    <section class="faculty section-padding">
+        <div class="container">
+            <h2 class="section-title">Faculty Directory</h2>
+            <div class="faculty-grid">
+                <div class="faculty-card floating">
+                    <div class="faculty-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Faculty Member">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Muhammad Ali</h3>
+                        <p>Professor</p>
+                        <div class="faculty-department">Computer Science</div>
+                        <a href="#" class="btn">View Profile</a>
+                    </div>
+                </div>
+                
+                <div class="faculty-card floating delay-1">
+                    <div class="faculty-img">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Faculty Member">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Ayesha Khan</h3>
+                        <p>Associate Professor</p>
+                        <div class="faculty-department">Information Technology</div>
+                        <a href="#" class="btn">View Profile</a>
+                    </div>
+                </div>
+                
+                <div class="faculty-card floating delay-2">
+                    <div class="faculty-img">
+                        <img src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Faculty Member">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Usman Ahmed</h3>
+                        <p>Assistant Professor</p>
+                        <div class="faculty-department">Software Engineering</div>
+                        <a href="#" class="btn">View Profile</a>
+                    </div>
+                </div>
+                
+                <div class="faculty-card floating delay-3">
+                    <div class="faculty-img">
+                        <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Faculty Member">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Fatima Zahra</h3>
+                        <p>Professor</p>
+                        <div class="faculty-department">Data Science</div>
+                        <a href="#" class="btn">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn">View All Faculty</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Calendar -->
+    <section class="calendar section-padding">
+        <div class="container">
+            <h2 class="section-title">Academic Calendar</h2>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <div class="calendar-title">Fall Semester 2023</div>
+                    <a href="#" class="calendar-download">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                
+                <ul class="calendar-events">
+                    <li class="calendar-event">
+                        <div class="event-date">August 28, 2023</div>
+                        <h3 class="event-title">Semester Begins</h3>
+                        <p class="event-description">First day of classes for Fall 2023 semester</p>
+                    </li>
+                    
+                    <li class="calendar-event">
+                        <div class="event-date">September 4, 2023</div>
+                        <h3 class="event-title">Last Day to Add/Drop Courses</h3>
+                        <p class="event-description">Deadline for course registration changes without penalty</p>
+                    </li>
+                    
+                    <li class="calendar-event">
+                        <div class="event-date">October 9-13, 2023</div>
+                        <h3 class="event-title">Midterm Examinations</h3>
+                        <p class="event-description">Midterm exams for all courses</p>
+                    </li>
+                    
+                    <li class="calendar-event">
+                        <div class="event-date">November 23-25, 2023</div>
+                        <h3 class="event-title">Thanksgiving Break</h3>
+                        <p class="event-description">University closed for Thanksgiving holiday</p>
+                    </li>
+                    
+                    <li class="calendar-event">
+                        <div class="event-date">December 11-15, 2023</div>
+                        <h3 class="event-title">Final Examinations</h3>
+                        <p class="event-description">Final exams for all courses</p>
+                    </li>
+                    
+                    <li class="calendar-event">
+                        <div class="event-date">December 18, 2023</div>
+                        <h3 class="event-title">Semester Ends</h3>
+                        <p class="event-description">Last day of Fall 2023 semester</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>The University of Sargodha is committed to academic excellence, research innovation, and community engagement in Pakistan's higher education landscape.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Academic Calendar</a></li>
+                        <li><a href="#">University Library</a></li>
+                        <li><a href="#">Campus Map</a></li>
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Faculty Directory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> University Road, Sargodha, Punjab, Pakistan</p>
+                    <p><i class="fas fa-phone"></i> +92 48 9230811-15</p>
+                    <p><i class="fas fa-envelope"></i> info@uos.edu.pk</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 University of Sargodha. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Button -->
+    <div class="chatbot-btn" onclick="toggleChatbot()"><i class="fas fa-robot"></i></div>
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <h3>Admission Assistant</h3>
+            <button class="chatbot-close" onclick="closeChatbot()">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <div class="typing-indicator" id="typing-indicator">
+            <span class="typing-dots"></span>
+            <span class="typing-dots"></span>
+            <span class="typing-dots"></span>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input-field" placeholder="Ask about admissions...">
+            <button id="chatbot-send-btn" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Typewriter Effect
+        const typewriterElement = document.getElementById('typewriter');
+        const phrases = [
+            "Academic Excellence",
+            "Innovative Programs",
+            "Quality Education",
+            "University of Sargodha"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isEnd = false;
+
+        function typeWriter() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isEnd = true;
+                isDeleting = true;
+                setTimeout(typeWriter, 1500);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeWriter, 500);
+            } else {
+                const speed = isDeleting ? 100 : 150;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        // Start the typewriter effect
+        setTimeout(typeWriter, 1000);
+
+        // Tab Functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Animation on scroll initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.program-card, .faculty-card, .calendar-event');
+            
+            animatedElements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = `all 0.5s ease ${index * 0.1}s`;
+            });
+
+            const animateOnScroll = () => {
+                animatedElements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.venv/
+ENV/
+
+# Rasa cache and models
+.rasa/
+models/
+
+# Logs and DB
+*.log
+*.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE specific files
+.vscode/
+.idea/
+*.iml
+
+# System files
+.DS_Store
+Thumbs.db
